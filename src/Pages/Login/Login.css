@@ -1,0 +1,59 @@
+@media screen and (min-width: 1200px) {
+  .login-registration {
+    padding: 5% 0 5%;
+  }
+}
+
+.login-registration .content-box, .login-registration .content-box-fluid {
+  margin-bottom: 30px;
+}
+
+.login-registration.banner:before {
+  display: none;
+}
+
+.banner {
+  position: relative;
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+
+@media screen and (min-width: 992px) {
+  .banner {
+    padding: 5% 0 5%;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .banner {
+    padding: 15% 0 7%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .banner {
+    padding: 20% 0 10%;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .banner {
+    padding: 150px 0 50px;
+  }
+}
+
+.banner .vector-img {
+  width: 34%;
+  position: absolute;
+  right: 9%;
+  top: 46%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+@media screen and (max-width: 767px) {
+  .banner .vector-img {
+    display: none;
+  }
+}
