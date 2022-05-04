@@ -54,10 +54,10 @@ const FooterTop = () => {
                   <Link to={routes.home}>payment</Link>
                 </li>
                 <li>
-                  <Link to={routes.home}>help</Link>
+                  <Link to={routes.policy}>Privacy Policy</Link>
                 </li>
                 <li>
-                  <Link to={routes.home}>FAQ</Link>
+                  <Link to={routes.terms}>Terms Condition</Link>
                 </li>
               </ul>
             </Widget>
