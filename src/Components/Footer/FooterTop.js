@@ -48,7 +48,7 @@ const FooterTop = () => {
                   <Link to={routes.contactUs}>contact us</Link>
                 </li>
                 <li>
-                  <Link to={routes.home}>about us</Link>
+                  <Link to={routes.aboutUs}>about us</Link>
                 </li>
                 <li>
                   <Link to={routes.home}>payment</Link>

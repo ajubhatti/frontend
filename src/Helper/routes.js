@@ -10,6 +10,7 @@ const routes = {
   policy: "/privacy-policy",
   notFound: "/404",
   contactUs: "/contact-us",
+  aboutUs: "/about-us",
 };
 
 export default routes;
