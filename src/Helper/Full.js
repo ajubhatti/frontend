@@ -9,6 +9,7 @@ import ProfileContainer from "../Containers/Profile";
 import RegisterContainer from "../Containers/Register";
 import ResetPasswordContainer from "../Containers/ResetPassword";
 import verifyEmailContainer from "../Containers/verifyEmail";
+import PageNotFound from "../Pages/PageNotFound";
 import PrivacyPolicy from "../Pages/PrivacyPolicy";
 import TermsCondition from "../Pages/TermsCondition";
 import { getToken } from "./LocalStorage";
@@ -86,8 +87,14 @@ const Full = (props) => {
           name="privacy-policy"
           component={PrivacyPolicy}
         />
+        <Route
+          exact
+          path={routes.notFound}
+          name="404"
+          component={PageNotFound}
+        />
         <Redirect from="/" to={routes.home} />
-        {/* <Route path="*" exact component={PageNotFound} /> */}
+        <Route path="*" exact component={PageNotFound} />
       </Switch>
     </Main>
   );

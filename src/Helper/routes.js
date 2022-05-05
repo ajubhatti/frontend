@@ -8,6 +8,7 @@ const routes = {
   profile: "/profile",
   terms: "/terms-condition",
   policy: "/privacy-policy",
+  notFound: "/404",
 };
 
 export default routes;
