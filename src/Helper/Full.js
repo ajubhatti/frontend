@@ -9,6 +9,7 @@ import ProfileContainer from "../Containers/Profile";
 import RegisterContainer from "../Containers/Register";
 import ResetPasswordContainer from "../Containers/ResetPassword";
 import verifyEmailContainer from "../Containers/verifyEmail";
+import AboutUs from "../Pages/AboutUs";
 import ContactUs from "../Pages/ContactUs";
 import PageNotFound from "../Pages/PageNotFound";
 import PrivacyPolicy from "../Pages/PrivacyPolicy";
@@ -99,6 +100,12 @@ const Full = (props) => {
           path={routes.contactUs}
           name="contact-us"
           component={ContactUs}
+        />
+        <Route
+          exact
+          path={routes.aboutUs}
+          name="about-us"
+          component={AboutUs}
         />
         <Redirect from="/" to={routes.home} />
         <Route path="*" exact component={PageNotFound} />
