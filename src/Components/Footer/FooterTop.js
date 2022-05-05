@@ -45,7 +45,7 @@ const FooterTop = () => {
             <Widget title="Features">
               <ul>
                 <li>
-                  <Link to={routes.home}>contact us</Link>
+                  <Link to={routes.contactUs}>contact us</Link>
                 </li>
                 <li>
                   <Link to={routes.home}>about us</Link>
