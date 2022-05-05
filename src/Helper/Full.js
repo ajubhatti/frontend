@@ -9,6 +9,7 @@ import ProfileContainer from "../Containers/Profile";
 import RegisterContainer from "../Containers/Register";
 import ResetPasswordContainer from "../Containers/ResetPassword";
 import verifyEmailContainer from "../Containers/verifyEmail";
+import ContactUs from "../Pages/ContactUs";
 import PageNotFound from "../Pages/PageNotFound";
 import PrivacyPolicy from "../Pages/PrivacyPolicy";
 import TermsCondition from "../Pages/TermsCondition";
@@ -92,6 +93,12 @@ const Full = (props) => {
           path={routes.notFound}
           name="404"
           component={PageNotFound}
+        />
+        <Route
+          exact
+          path={routes.contactUs}
+          name="contact-us"
+          component={ContactUs}
         />
         <Redirect from="/" to={routes.home} />
         <Route path="*" exact component={PageNotFound} />

@@ -9,6 +9,7 @@ const routes = {
   terms: "/terms-condition",
   policy: "/privacy-policy",
   notFound: "/404",
+  contactUs: "/contact-us",
 };
 
 export default routes;
