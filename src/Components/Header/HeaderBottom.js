@@ -46,13 +46,13 @@ const HeaderBottom = (props) => {
                 <Link to={routes.home}>Download</Link>
               </li>
               <li>
-                <Link to={routes.home}>Sport</Link>
+                <Link to={routes.home}>Support</Link>
               </li>
               <li>
                 <Link to={routes.home}>Contact US</Link>
               </li>
               <li>
-                <Link to={routes.home}>Referral</Link>
+                <Link to={routes.refer}>Referral</Link>
               </li>
               {props.jwtToken && (
                 <li
