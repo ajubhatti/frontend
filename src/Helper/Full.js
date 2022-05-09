@@ -9,6 +9,7 @@ import ProfileContainer from "../Containers/Profile";
 import RegisterContainer from "../Containers/Register";
 import ResetPasswordContainer from "../Containers/ResetPassword";
 import verifyEmailContainer from "../Containers/verifyEmail";
+import ReferContainer from '../Containers/Refer';
 import AboutUs from "../Pages/AboutUs";
 import ContactUs from "../Pages/ContactUs";
 import PageNotFound from "../Pages/PageNotFound";
@@ -106,6 +107,12 @@ const Full = (props) => {
           path={routes.aboutUs}
           name="about-us"
           component={AboutUs}
+        />
+        <Route
+          exact
+          path={routes.refer}
+          name="refer"
+          component={ReferContainer}
         />
         <Redirect from="/" to={routes.home} />
         <Route path="*" exact component={PageNotFound} />

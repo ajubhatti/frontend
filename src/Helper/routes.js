@@ -11,6 +11,7 @@ const routes = {
   notFound: "/404",
   contactUs: "/contact-us",
   aboutUs: "/about-us",
+  refer: "/refer",
 };
 
 export default routes;
