@@ -21,7 +21,7 @@ const HeaderTop = (props) => {
             </div>
           </div>
           <div className="col-md-6 text-md-right">
-            {props.jwtToken ? (
+            {props.token ? (
               ""
             ) : (
               <ul className="login-area">

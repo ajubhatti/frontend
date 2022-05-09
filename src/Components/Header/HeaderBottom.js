@@ -54,7 +54,7 @@ const HeaderBottom = (props) => {
               <li>
                 <Link to={routes.refer}>Referral</Link>
               </li>
-              {props.jwtToken && (
+              {props.token && (
                 <li
                   className={`dropdown profile ${open ? "open" : ""}`}
                   onMouseEnter={() => setOpen(true)}
@@ -70,7 +70,7 @@ const HeaderBottom = (props) => {
               )}
             </ul>
           </div>
-          {props.jwtToken && (
+          {props.token && (
             <ul className="text-right profile-rcv">
               <li className="dropdown profile">
                 <div className="profile-btn">

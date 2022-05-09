@@ -49,7 +49,7 @@ export const Crypto = new SimpleCrypto(_secretKey);
 export const getToken = () => {
   let user = LocalStorage.get(localStorageKey.user);
   user = user && Crypto.decrypt(user) ? Crypto.decrypt(user) : null;
-  return user && user.jwtToken ? user.jwtToken : null;
+  return user && user.token ? user.token : null;
 };
 
 export const getUser = () => {
