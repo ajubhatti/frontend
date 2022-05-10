@@ -1,5 +1,7 @@
 import React from "react";
 import { ArrowCounterclockwise, Gear } from "react-bootstrap-icons";
+import { Link } from "react-router-dom";
+import routes from "../../Helper/routes";
 
 const ProfileDropdown = (props) => {
   return (
@@ -14,12 +16,12 @@ const ProfileDropdown = (props) => {
           </div>
         </div>
       </li>
-      <li className="nav__create-new-profile-link">
-        <a href="#">
-          <span>View personal profile</span>
-        </a>
-      </li>
       <li className="divider"></li>
+      <li className="nav__dropdown-menu-items">
+        <Link to={routes.profileDashboard}>
+          <span>Dashboard</span>
+        </Link>
+      </li>
       <li className="nav__dropdown-menu-items">
         <a href="#">
           <Gear />
