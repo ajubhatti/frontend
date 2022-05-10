@@ -6,10 +6,11 @@ import ForgotPasswordContainer from "../Containers/ForgotPassword";
 import HomeContainer from "../Containers/Home";
 import LoginContainer from "../Containers/Login";
 import ProfileContainer from "../Containers/Profile";
+import ProfileDashboardContainer from "../Containers/Profile/dashboard";
 import RegisterContainer from "../Containers/Register";
 import ResetPasswordContainer from "../Containers/ResetPassword";
 import verifyEmailContainer from "../Containers/verifyEmail";
-import ReferContainer from '../Containers/Refer';
+import ReferContainer from "../Containers/Refer";
 import AboutUs from "../Pages/AboutUs";
 import ContactUs from "../Pages/ContactUs";
 import PageNotFound from "../Pages/PageNotFound";
@@ -77,6 +78,12 @@ const Full = (props) => {
           name="profile"
           path={routes.profile}
           component={ProfileContainer}
+        />
+        <PrivateRoute
+          exact
+          name="account-dashboard"
+          path={routes.profileDashboard}
+          component={ProfileDashboardContainer}
         />
         <Route
           exact

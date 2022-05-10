@@ -12,6 +12,7 @@ const routes = {
   contactUs: "/contact-us",
   aboutUs: "/about-us",
   refer: "/refer",
+  profileDashboard: "/profile-dashboard"
 };
 
 export default routes;
