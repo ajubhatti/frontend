@@ -1,69 +1,112 @@
 import React from "react";
-import { Container, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import routes from "../../Helper/routes";
-import Widget from "../Widget";
 
 const FooterTop = () => {
   return (
-    <div className="foo-top">
-      <Container>
-        <Row>
-          <div className="col-md-3 col-sm-6">
-            <Widget title="About badipay">
-              <div className="widget-content">
-                <p>
-                  Maecenas condimentum vitae lectus nec tristique sed quis est
-                  ac est elementum.
-                </p>
-              </div>
-            </Widget>
+    <div className="border-bottom">
+      <div className="container space-2">
+        <div className="row justify-content-md-between">
+          <div className="col-sm-4 col-lg-2 mb-4 mb-lg-0">
+            <h4 className="h6 font-weight-semi-bold">About</h4>
+            <ul className="list-group list-group-flush list-group-borderless mb-0">
+              <li>
+                <Link
+                  to={routes.aboutUs}
+                  className="list-group-item list-group-item-action"
+                >
+                  About
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to={routes.contactUs}
+                  className="list-group-item list-group-item-action"
+                >
+                  Contact
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to={routes.home}
+                  className="list-group-item list-group-item-action"
+                >
+                  Service
+                </Link>
+              </li>
+            </ul>
           </div>
-          <div className="col-md-3 col-sm-6">
-            <Widget title="Features">
-              <ul>
-                <li>All Mobile/DTH Operators available</li>
-                <li>Instant recharge</li>
-                <li>Recharge by SMS or web</li>
-                <li>One Account for all recharge services</li>
-                <li>Profitable Margin</li>
-              </ul>
-            </Widget>
+
+          <div className="col-sm-4 col-lg-2 mb-4 mb-lg-0">
+            <h4 className="h6 font-weight-semi-bold">Account</h4>
+            <ul className="list-group list-group-flush list-group-borderless mb-0">
+              <li>
+                <Link
+                  to={routes.refer}
+                  className="list-group-item list-group-item-action"
+                >
+                  Refer
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to={routes.home}
+                  className="list-group-item list-group-item-action"
+                >
+                  Recharge
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to={routes.home}
+                  className="list-group-item list-group-item-action"
+                >
+                  Support
+                </Link>
+              </li>
+            </ul>
           </div>
-          <div className="col-md-3 col-sm-6">
-            <Widget title="Features">
-              <ul>
-                <li>Recharge any Mobile Phone</li>
-                <li>Top-Up All DTH Services</li>
-                <li>Data Card Recharge</li>
-                <li>Postpaid bill payment</li>
-                <li>Single Wallet multi recharge</li>
-              </ul>
-            </Widget>
+
+          <div className="col-sm-4 col-lg-2 mb-4 mb-lg-0">
+            <h4 className="h6 font-weight-semi-bold">Resources</h4>
+            <ul className="list-group list-group-flush list-group-borderless mb-0">
+              <li>
+                <Link
+                  to={routes.home}
+                  className="list-group-item list-group-item-action"
+                >
+                  FAQ
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to={routes.policy}
+                  className="list-group-item list-group-item-action"
+                >
+                  Privacy & Policy
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to={routes.terms}
+                  className="list-group-item list-group-item-action"
+                >
+                  Terms & Condition
+                </Link>
+              </li>
+            </ul>
           </div>
-          <div className="col-md-3 col-sm-6">
-            <Widget title="Features">
-              <ul>
-                <li>
-                  <Link to={routes.contactUs}>contact us</Link>
-                </li>
-                <li>
-                  <Link to={routes.aboutUs}>about us</Link>
-                </li>
-                <li>
-                  <Link to={routes.home}>payment</Link>
-                </li>
-                <li>
-                  <Link to={routes.policy}>Privacy Policy</Link>
-                </li>
-                <li>
-                  <Link to={routes.terms}>Terms Condition</Link>
-                </li>
-              </ul>
-            </Widget>
+
+          <div className="col-md-6 col-lg-4">
+            <h4 className="h6 font-weight-semi-bold">Business opportunity</h4>
+            <p>
+              Wanted distributors and retailers all over india. Hi speed
+              recharge system with high margin, please contact us to start this
+              business
+            </p>
           </div>
-        </Row>
-      </Container>
+        </div>
+      </div>
     </div>
   );
 };

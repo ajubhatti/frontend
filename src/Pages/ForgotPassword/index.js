@@ -1,6 +1,5 @@
 import React from "react";
 import VectorImg from "../../Assets/vector.png";
-import "./ForgotPassword.css";
 import ForgotForm from "./ForgotForm";
 
 const ForgotPassword = (props) => {

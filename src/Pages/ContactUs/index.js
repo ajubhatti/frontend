@@ -30,15 +30,17 @@ const ContactUs = () => {
     },
   ];
   return (
-    <section className="contact">
-      <div className="container position-relative space-2 space-top-md-5 space-bottom-md-3 z-index-2">
-        <div className="w-lg-80 text-center mx-auto">
-          <h1 className="display-3 font-size-md-down-5 font-weight-semi-bold">
-            Got a question?
-          </h1>
-          <p className="lead">We'd love to talk about how we can help you.</p>
+    <div className="space-2 space-top-md-4 space-top-lg-3">
+      <div className="w-lg-80 text-center mx-lg-auto">
+        <div className="mb-11">
+          <h1 className="display-4 font-weight-semi-bold">Got a question?</h1>
+          <p className="lead font-weight-normal">
+            How can Badipay assistants help you? Whether you have questions or
+            you would just like to say hello, contact us.
+          </p>
         </div>
       </div>
+
       <div className="clearfix space-2">
         <div className="row no-gutters">
           {cards.length > 0 &&
@@ -49,7 +51,7 @@ const ContactUs = () => {
       </div>
       <hr className="my-0" />
       <ContactForm />
-    </section>
+    </div>
   );
 };
 

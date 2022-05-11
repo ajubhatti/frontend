@@ -91,9 +91,9 @@ export const columns = [
     sortable: true,
     cell: (d) => (
       <div className="align-middle">
-        <div class="media align-items-center">
-          <span class="btn btn-sm btn-icon btn-soft-success rounded-circle mr-2">
-            <span class="btn-icon__inner font-weight-medium">
+        <div className="media align-items-center">
+          <span className="btn btn-sm btn-icon btn-soft-success rounded-circle mr-2">
+            <span className="btn-icon__inner font-weight-medium">
               {d.title.charAt(0)}
             </span>
           </span>

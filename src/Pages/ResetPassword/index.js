@@ -1,5 +1,4 @@
 import React from "react";
-import "./ResetPassword.css";
 import ResetForm from "./ResetForm";
 import VectorImg from "../../Assets/vector.png";
 

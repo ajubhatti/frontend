@@ -1,7 +1,6 @@
 import React from "react";
 import VectorImg from "../../Assets/vector.png";
 import RegisterForm from "./RegisterForm";
-import "./Register.css";
 
 const Register = (props) => {
   return (
