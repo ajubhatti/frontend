@@ -2,39 +2,34 @@ import React from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
+import { Buffer } from "buffer";
 
-const Banner = () => {
-  var settings = {
-    dots: false,
-    arrow: true,
+const Banner = ({ bannerList }) => {
+  const ShowImage = (data, index) => {
+    let imgData = new Buffer.from(data.data).toString("base64");
+    return (
+      <img
+        src={`data:image/*;base64,${imgData}`}
+        alt={index}
+        style={{ height: "400px", width: "100%", objectFit: "cover" }}
+      />
+    );
+  };
+
+  const settings = {
+    dots: true,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
   };
   return (
-    <section className="banner py-0 bg-light" style={{ height: "300px" }}>
-      <Slider {...settings}>
-        <div>
-          <h3>1</h3>
-        </div>
-        <div>
-          <h3>2</h3>
-        </div>
-        <div>
-          <h3>3</h3>
-        </div>
-        <div>
-          <h3>4</h3>
-        </div>
-        <div>
-          <h3>5</h3>
-        </div>
-        <div>
-          <h3>6</h3>
-        </div>
-      </Slider>
-    </section>
+    <Slider {...settings}>
+      {bannerList.length > 0 &&
+        bannerList.map((imgDt, index) => {
+          return <div key={index}>{ShowImage(imgDt.img, index)}</div>;
+        })}
+    </Slider>
   );
 };
 
