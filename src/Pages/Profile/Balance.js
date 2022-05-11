@@ -10,15 +10,15 @@ const Balance = () => {
           <div className="position-relative"></div>
         </div>
         <hr className="mt-3 mb-4" />
-        <div class="row align-items-center mb-4">
-          <div class="col-6 u-ver-divider">
-            <label class="d-block small text-muted mb-0">Available:</label>
-            <span class="font-weight-medium">$45.99</span>
+        <div className="row align-items-center mb-4">
+          <div className="col-6 u-ver-divider">
+            <label className="d-block small text-muted mb-0">Available:</label>
+            <span className="font-weight-medium">$45.99</span>
           </div>
 
-          <div class="col-6">
-            <label class="d-block small text-muted mb-0">Pending:</label>
-            <span class="font-weight-medium">$0.00</span>
+          <div className="col-6">
+            <label className="d-block small text-muted mb-0">Pending:</label>
+            <span className="font-weight-medium">$0.00</span>
           </div>
         </div>
         <BarChart />

@@ -7,12 +7,12 @@ const TermsCondition = () => {
         <div className="row">
           <div className="col-12">
             <div className="space-bottom-1">
-              <div class="border-bottom pb-5 mb-5">
-                <h1 class="text-primary"> Terms &amp; conditions</h1>
+              <div className="border-bottom pb-5 mb-5">
+                <h1 className="text-primary"> Terms &amp; conditions</h1>
                 <p>Effective date: 1 May 2022</p>
               </div>
-              <div class="mb-3">
-                <h2 class="h5">Welcome to badipay</h2>
+              <div className="mb-3">
+                <h2 className="h5">Welcome to badipay</h2>
               </div>
               <p>
                 Sum dolor sit amet consectetur adipisicing elit. In consectetur
@@ -31,8 +31,8 @@ const TermsCondition = () => {
               </p>
             </div>
             <div className="space-bottom-1">
-              <div class="mb-3">
-                <h3 class="h5">1. Using our services</h3>
+              <div className="mb-3">
+                <h3 className="h5">1. Using our services</h3>
               </div>
               <ul className="text-secondary">
                 <li className="pb-2">

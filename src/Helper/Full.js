@@ -7,6 +7,8 @@ import HomeContainer from "../Containers/Home";
 import LoginContainer from "../Containers/Login";
 import ProfileContainer from "../Containers/Profile";
 import ProfileDashboardContainer from "../Containers/Profile/dashboard";
+import ProfileTransactionContainer from "../Containers/Profile/Transaction";
+import ChangePasswordContainer from "../Containers/Profile/ChangePassword";
 import RegisterContainer from "../Containers/Register";
 import ResetPasswordContainer from "../Containers/ResetPassword";
 import verifyEmailContainer from "../Containers/verifyEmail";
@@ -84,6 +86,18 @@ const Full = (props) => {
           name="account-dashboard"
           path={routes.profileDashboard}
           component={ProfileDashboardContainer}
+        />
+        <PrivateRoute
+          exact
+          name="account-transaction"
+          path={routes.profileTransaction}
+          component={ProfileTransactionContainer}
+        />
+        <PrivateRoute
+          exact
+          name="change-password"
+          path={routes.profileChangePassword}
+          component={ChangePasswordContainer}
         />
         <Route
           exact

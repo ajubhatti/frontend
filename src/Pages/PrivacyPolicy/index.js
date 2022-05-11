@@ -7,12 +7,12 @@ const PrivacyPolicy = () => {
         <div className="w-lg-80 mx-lg-auto">
           <div className="card shadow-sm">
             <div className="card-header position-relative gradient-half-primary-v1 space-top-2 space-bottom-3 rounded-top-pseudo px-7 px-md-9">
-              <h1 class="text-white font-weight-semi-bold">
+              <h1 className="text-white font-weight-semi-bold">
                 Privacy &amp; Policy
               </h1>
-              <p class="text-white-70">
+              <p className="text-white-70">
                 Last modified: March 27, 2018 (
-                <a class="text-light" href="#">
+                <a className="text-light" href="#">
                   view archived versions
                 </a>
                 )
@@ -20,8 +20,8 @@ const PrivacyPolicy = () => {
             </div>
             <div className="card-body p-7 p-md-9">
               <div className="mb-7">
-                <div class="mb-3">
-                  <h3 class="h5 text-primary font-weight-semi-bold">
+                <div className="mb-3">
+                  <h3 className="h5 text-primary font-weight-semi-bold">
                     Introduction
                   </h3>
                 </div>
@@ -44,8 +44,8 @@ const PrivacyPolicy = () => {
                 </p>
               </div>
               <div className="mb-7">
-                <div class="mb-3">
-                  <h3 class="h5 text-primary font-weight-semi-bold">
+                <div className="mb-3">
+                  <h3 className="h5 text-primary font-weight-semi-bold">
                     Using our services
                   </h3>
                 </div>
@@ -75,7 +75,7 @@ const PrivacyPolicy = () => {
                 </p>
               </div>
               <div className="mb-7">
-                <h3 class="h5 text-primary font-weight-semi-bold">
+                <h3 className="h5 text-primary font-weight-semi-bold">
                   Privacy and copyright protection
                 </h3>
                 <p>
@@ -99,7 +99,7 @@ const PrivacyPolicy = () => {
                 </p>
               </div>
               <div className="mb-7">
-                <h3 class="h5 text-primary font-weight-semi-bold">
+                <h3 className="h5 text-primary font-weight-semi-bold">
                   Your content in our services
                 </h3>
                 <p>

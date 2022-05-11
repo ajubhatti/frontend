@@ -12,7 +12,9 @@ const routes = {
   contactUs: "/contact-us",
   aboutUs: "/about-us",
   refer: "/refer",
-  profileDashboard: "/profile-dashboard"
+  profileDashboard: "/dashboard",
+  profileTransaction: "/transaction",
+  profileChangePassword: "/change-password",
 };
 
 export default routes;

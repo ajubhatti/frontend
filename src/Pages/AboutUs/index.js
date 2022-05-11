@@ -5,29 +5,29 @@ const AboutUs = () => {
     <>
       <section className="about">
         <div className="container space-2 space-top-md-5 space-top-lg-4">
-          <div class="w-lg-80 text-center mx-lg-auto">
-            <div class="mb-11">
-              <h1 class="display-4 font-weight-semi-bold">About Us</h1>
-              <p class="lead font-weight-normal">
+          <div className="w-lg-80 text-center mx-lg-auto">
+            <div className="mb-11">
+              <h1 className="display-4 font-weight-semi-bold">About Us</h1>
+              <p className="lead font-weight-normal">
                 We're on a mission to simplify cloud computing so developers and
                 their teams can spend more time building software that changes
                 the world.
               </p>
             </div>
           </div>
-          <div class="container">
-            <div class="w-lg-65 mx-lg-auto">
-              <hr class="my-0" />
+          <div className="container">
+            <div className="w-lg-65 mx-lg-auto">
+              <hr className="my-0" />
             </div>
           </div>
-          <div class="container space-2 space-lg-3">
-            <div class="row justify-content-lg-between">
-              <div class="col-lg-4 mb-5 mb-lg-0">
-                <h2 class="font-weight-semi-bold">
+          <div className="container space-2 space-lg-3">
+            <div className="row justify-content-lg-between">
+              <div className="col-lg-4 mb-5 mb-lg-0">
+                <h2 className="font-weight-semi-bold">
                   Tools should adapt to the user, not the other way around.
                 </h2>
               </div>
-              <div class="col-lg-6">
+              <div className="col-lg-6">
                 <p>
                   Since 2007, we have helped 25 companies launch over 1k
                   incredible products. We believe the best digital solutions are
@@ -47,37 +47,37 @@ const AboutUs = () => {
               </div>
             </div>
           </div>
-          <div class="container">
-            <div class="w-lg-65 mx-lg-auto">
-              <hr class="my-0" />
+          <div className="container">
+            <div className="w-lg-65 mx-lg-auto">
+              <hr className="my-0" />
             </div>
           </div>
-          <div class="container space-top-1 space-bottom-2 space-bottom-lg-3">
-            <div class="row justify-content-lg-center">
-              <div class="col-sm-4 col-lg-3 mb-7 mb-sm-0">
-                <div class="text-center">
-                  <span class="d-block h2 font-weight-semi-bold text-uppercase mb-0">
+          <div className="container space-top-1 space-bottom-2 space-bottom-lg-3">
+            <div className="row justify-content-lg-center">
+              <div className="col-sm-4 col-lg-3 mb-7 mb-sm-0">
+                <div className="text-center">
+                  <span className="d-block h2 font-weight-semi-bold text-uppercase mb-0">
                     17
                   </span>
-                  <span class="text-secondary">years in business</span>
+                  <span className="text-secondary">years in business</span>
                 </div>
               </div>
 
-              <div class="col-sm-4 col-lg-3 mb-7 mb-sm-0">
-                <div class="text-center">
-                  <span class="d-block h2 font-weight-semi-bold text-uppercase mb-0">
+              <div className="col-sm-4 col-lg-3 mb-7 mb-sm-0">
+                <div className="text-center">
+                  <span className="d-block h2 font-weight-semi-bold text-uppercase mb-0">
                     1k+
                   </span>
-                  <span class="text-secondary">products launched</span>
+                  <span className="text-secondary">products launched</span>
                 </div>
               </div>
 
-              <div class="col-sm-4 col-lg-3">
-                <div class="text-center">
-                  <span class="d-block h2 font-weight-semi-bold text-uppercase mb-0">
+              <div className="col-sm-4 col-lg-3">
+                <div className="text-center">
+                  <span className="d-block h2 font-weight-semi-bold text-uppercase mb-0">
                     53%
                   </span>
-                  <span class="text-secondary">remote employees</span>
+                  <span className="text-secondary">remote employees</span>
                 </div>
               </div>
             </div>

@@ -6,7 +6,7 @@
   viewBox="0 0 120 120"
   style="enable-background: new 0 0 120 120"
   xml:space="preserve"
-  class="injected-svg js-svg-injector"
+  className="injected-svg js-svg-injector"
   data-parent="#icon15"
 >
   <style type="text/css">
@@ -30,7 +30,7 @@
     }
   </style>
   <line
-    class="icon-15-0 fill-none stroke-gray-400"
+    className="icon-15-0 fill-none stroke-gray-400"
     opacity=".5"
     stroke-width="3"
     stroke-linecap="round"
@@ -42,7 +42,7 @@
     y2="66.2"
   ></line>
   <line
-    class="icon-15-0 fill-none stroke-gray-400"
+    className="icon-15-0 fill-none stroke-gray-400"
     opacity=".5"
     stroke-width="3"
     stroke-linecap="round"
@@ -54,7 +54,7 @@
     y2="76.4"
   ></line>
   <line
-    class="icon-15-0 fill-none stroke-gray-400"
+    className="icon-15-0 fill-none stroke-gray-400"
     opacity=".5"
     stroke-width="3"
     stroke-linecap="round"
@@ -66,7 +66,7 @@
     y2="76.5"
   ></line>
   <line
-    class="icon-15-0 fill-none stroke-gray-400"
+    className="icon-15-0 fill-none stroke-gray-400"
     opacity=".5"
     stroke-width="3"
     stroke-linecap="round"
@@ -78,7 +78,7 @@
     y2="85.8"
   ></line>
   <line
-    class="icon-15-0 fill-none stroke-gray-400"
+    className="icon-15-0 fill-none stroke-gray-400"
     opacity=".5"
     stroke-width="3"
     stroke-linecap="round"
@@ -90,7 +90,7 @@
     y2="85.8"
   ></line>
   <line
-    class="icon-15-0 fill-none stroke-gray-400"
+    className="icon-15-0 fill-none stroke-gray-400"
     opacity=".5"
     stroke-width="3"
     stroke-linecap="round"
@@ -102,7 +102,7 @@
     y2="76.5"
   ></line>
   <line
-    class="icon-15-0 fill-none stroke-gray-400"
+    className="icon-15-0 fill-none stroke-gray-400"
     opacity=".5"
     stroke-width="3"
     stroke-linecap="round"
@@ -114,17 +114,17 @@
     y2="66.2"
   ></line>
   <path
-    class="icon-15-1 fill-gray-400"
+    className="icon-15-1 fill-gray-400"
     opacity=".5"
     d="M115.7,114.2H38.7c-2.4,0-4.3-2-4.3-4.3v-48c0-2.4,2-4.3,4.3-4.3h76.9c2.4,0,4.3,2,4.3,4.3v48  C120,112.2,118,114.2,115.7,114.2z"
   ></path>
   <path
-    class="icon-15-2 fill-primary"
+    className="icon-15-2 fill-primary"
     d="M106.1,102.9H29.2c-2.4,0-4.3-2-4.3-4.3v-48c0-2.4,2-4.3,4.3-4.3h76.9c2.4,0,4.3,2,4.3,4.3v48  C110.4,100.9,108.5,102.9,106.1,102.9z"
   ></path>
   <g>
     <line
-      class="icon-15-3 fill-none stroke-white"
+      className="icon-15-3 fill-none stroke-white"
       stroke-width="3"
       stroke-linecap="round"
       stroke-linejoin="round"
@@ -135,7 +135,7 @@
       y2="101.5"
     ></line>
     <line
-      class="icon-15-3 fill-none stroke-white"
+      className="icon-15-3 fill-none stroke-white"
       stroke-width="3"
       stroke-linecap="round"
       stroke-linejoin="round"
@@ -146,7 +146,7 @@
       y2="101.5"
     ></line>
     <line
-      class="icon-15-3 fill-none stroke-white"
+      className="icon-15-3 fill-none stroke-white"
       stroke-width="3"
       stroke-linecap="round"
       stroke-linejoin="round"
@@ -157,7 +157,7 @@
       y2="78.6"
     ></line>
     <line
-      class="icon-15-3 fill-none stroke-white"
+      className="icon-15-3 fill-none stroke-white"
       stroke-width="3"
       stroke-linecap="round"
       stroke-linejoin="round"
@@ -169,7 +169,7 @@
     ></line>
   </g>
   <path
-    class="icon-15-4 fill-none stroke-primary"
+    className="icon-15-4 fill-none stroke-primary"
     stroke-width="3"
     stroke-linecap="round"
     stroke-linejoin="round"
@@ -177,7 +177,7 @@
     d="M106.1,102.9H29.2c-2.4,0-4.3-2-4.3-4.3v-48c0-2.4,2-4.3,4.3-4.3h76.9c2.4,0,4.3,2,4.3,4.3v48  C110.4,100.9,108.5,102.9,106.1,102.9z"
   ></path>
   <line
-    class="icon-15-3 fill-none stroke-white"
+    className="icon-15-3 fill-none stroke-white"
     opacity=".5"
     stroke-width="3"
     stroke-linecap="round"
@@ -189,7 +189,7 @@
     y2="95.1"
   ></line>
   <line
-    class="icon-15-3 fill-none stroke-white"
+    className="icon-15-3 fill-none stroke-white"
     opacity=".5"
     stroke-width="3"
     stroke-linecap="round"
@@ -201,7 +201,7 @@
     y2="95.1"
   ></line>
   <path
-    class="icon-15-0 fill-none stroke-gray-400"
+    className="icon-15-0 fill-none stroke-gray-400"
     stroke-width="3"
     stroke-linecap="round"
     stroke-linejoin="round"
@@ -209,7 +209,7 @@
     d="M89.9,107.9"
   ></path>
   <line
-    class="icon-15-0 fill-none stroke-gray-400"
+    className="icon-15-0 fill-none stroke-gray-400"
     opacity=".5"
     stroke-width="3"
     stroke-linecap="round"
@@ -221,7 +221,7 @@
     y2="36.3"
   ></line>
   <line
-    class="icon-15-0 fill-none stroke-gray-400"
+    className="icon-15-0 fill-none stroke-gray-400"
     opacity=".5"
     stroke-width="3"
     stroke-linecap="round"
@@ -233,7 +233,7 @@
     y2="27.9"
   ></line>
   <line
-    class="icon-15-0 fill-none stroke-gray-400"
+    className="icon-15-0 fill-none stroke-gray-400"
     opacity=".5"
     stroke-width="3"
     stroke-linecap="round"
@@ -245,7 +245,7 @@
     y2="27.9"
   ></line>
   <line
-    class="icon-15-0 fill-none stroke-gray-400"
+    className="icon-15-0 fill-none stroke-gray-400"
     opacity=".5"
     stroke-width="3"
     stroke-linecap="round"
@@ -257,7 +257,7 @@
     y2="36.2"
   ></line>
   <path
-    class="icon-15-0 fill-none stroke-gray-400"
+    className="icon-15-0 fill-none stroke-gray-400"
     stroke-width="3"
     stroke-linecap="round"
     stroke-linejoin="round"
@@ -266,7 +266,7 @@
   ></path>
   <g>
     <line
-      class="icon-15-0 fill-none stroke-gray-400"
+      className="icon-15-0 fill-none stroke-gray-400"
       stroke-width="3"
       stroke-linecap="round"
       stroke-linejoin="round"
@@ -277,7 +277,7 @@
       y2="39.2"
     ></line>
     <line
-      class="icon-15-0 fill-none stroke-gray-400"
+      className="icon-15-0 fill-none stroke-gray-400"
       stroke-width="3"
       stroke-linecap="round"
       stroke-linejoin="round"
@@ -289,7 +289,7 @@
     ></line>
   </g>
   <path
-    class="icon-15-0 fill-none stroke-gray-400"
+    className="icon-15-0 fill-none stroke-gray-400"
     stroke-width="3"
     stroke-linecap="round"
     stroke-linejoin="round"
