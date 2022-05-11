@@ -23,7 +23,7 @@
 }
 
 .foo-top {
-  background-color: #f3f3f3;
+  border-bottom: 1px solid #e7eaf3 !important;
   padding: 80px 0;
 }
 
@@ -77,18 +77,6 @@
   }
 }
 
-.foo-btm .payments-types {
-  position: relative;
-  display: block;
-  padding: 17px 0 0;
-}
-
-@media screen and (max-width: 768px) {
-  .foo-btm .payments-types {
-    padding: 0 0 15px;
-  }
-}
-
-.foo-btm .payments-types li {
-  display: inline-block;
+.foo-btm img {
+  height: 80px;
 }

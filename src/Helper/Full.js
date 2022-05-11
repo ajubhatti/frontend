@@ -33,7 +33,7 @@ const PrivateRoute = ({ component: Component, ...rest }) => (
   <Route
     {...rest}
     render={(props) =>
-      getToken() ? <Component {...props} /> : <Redirect to={routes.home} />
+      getToken() ? <Component {...props} /> : <Redirect to={routes.login} />
     }
   />
 );
@@ -121,7 +121,7 @@ const Full = (props) => {
           name="refer"
           component={ReferContainer}
         />
-        <Redirect from="/" to={routes.home} />
+        {/* <Redirect from="/" to={routes.home} /> */}
         <Route path="*" exact component={PageNotFound} />
       </Switch>
     </Main>

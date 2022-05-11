@@ -9,9 +9,9 @@ import MakeItRain from "../../Assets/makeItRain.svg";
 
 const Refer = () => {
   return (
-    <>
+    <div className="bg-light">
       <section className="contact">
-        <div className="container">
+        <div className="container space-2">
           <div className="row justify-content-md-between">
             <div className="col-md-6 mb-7 mb-md-0">
               <h3>Share a link and earn a bonus</h3>
@@ -108,7 +108,7 @@ const Refer = () => {
           </div>
         </div>
       </section>
-    </>
+    </div>
   );
 };
 

@@ -3,11 +3,17 @@ import React from "react";
 const TermsCondition = () => {
   return (
     <section className="terms-condition">
-      <div className="container">
+      <div className="container space-2 space-top-md-4 space-bottom-md-3">
         <div className="row">
           <div className="col-12">
-            <div className="entry-content">
-              <h3>Terms Condition</h3>
+            <div className="space-bottom-1">
+              <div class="border-bottom pb-5 mb-5">
+                <h1 class="text-primary"> Terms &amp; conditions</h1>
+                <p>Effective date: 1 May 2022</p>
+              </div>
+              <div class="mb-3">
+                <h2 class="h5">Welcome to badipay</h2>
+              </div>
               <p>
                 Sum dolor sit amet consectetur adipisicing elit. In consectetur
                 aspernatur illo soluta magnam repellendus, corporis sunt
@@ -23,26 +29,34 @@ const TermsCondition = () => {
                 beatae fugit saepe sit consequatur aliquid, quidem ex optio illo
                 omnis!
               </p>
-              <ul>
-                <li>
-                  1. Urem ipsum dolor sit amet consectetur adipisicing elit.
+            </div>
+            <div className="space-bottom-1">
+              <div class="mb-3">
+                <h3 class="h5">1. Using our services</h3>
+              </div>
+              <ul className="text-secondary">
+                <li className="pb-2">
+                  Urem ipsum dolor sit amet consectetur adipisicing elit.
                   Veritatis mollitia quis esse ad.
                 </li>
-                <li>
-                  2. Eleniti porro voluptates tempora molestiae dolores
-                  dignissimos odio? Tenetur, quo quidem.
+                <li className="pb-2">
+                  Eleniti porro voluptates tempora molestiae dolores dignissimos
+                  odio? Tenetur, quo quidem.
                 </li>
-                <li>3. Sunt suscipit ad est aliquam quibusdam voluptate!</li>
-                <li>
-                  4. Ad porro nobis placeat natus minima nisi temporibus sint
+                <li className="pb-2">
+                  Sunt suscipit ad est aliquam quibusdam voluptate!
+                </li>
+                <li className="pb-2">
+                  Ad porro nobis placeat natus minima nisi temporibus sint
                   veritatis deserunt nulla.
                 </li>
-                <li>
-                  5. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                <li className="pb-2">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Veritatis mollitia quis esse ad.
                 </li>
               </ul>
-              <h6>Dolor sit amet consectetur adipisicing elit. Unde, quasi.</h6>
+            </div>
+            <div className="space-bottom-1">
               <p>
                 Nemo dolores, iusto pariatur corporis quis ullam harum voluptate
                 porro officiis aliquam quas explicabo? Lorem ipsum dolor sit

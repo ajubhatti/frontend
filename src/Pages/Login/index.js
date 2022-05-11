@@ -12,9 +12,11 @@ const Login = (props) => {
       <div className="container">
         <div className="row">
           <div className="col-md-6">
-            <div className="content-box">
-              <h2>Login Account</h2>
-              <p>Login to continue</p>
+            <div class="mb-7">
+              <h2 class="h3 text-primary font-weight-normal mb-0">
+                Welcome <span class="font-weight-semi-bold">back</span>
+              </h2>
+              <p>Login to manage your account.</p>
             </div>
             <LoginForm {...props} />
           </div>

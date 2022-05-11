@@ -4,6 +4,9 @@ import { Link } from "react-router-dom";
 import ServiceCard from "../../Components/ServiceCard";
 import routes from "../../Helper/routes";
 import { services } from "../../Shared/constant";
+import Activity from "./Activity";
+import Balance from "./Balance";
+import Deposits from "./Deposite";
 
 const ProfileDashboard = () => {
   const serviceData =
@@ -13,8 +16,8 @@ const ProfileDashboard = () => {
     });
 
   return (
-    <section className="dashboard-section">
-      <div className="container">
+    <section className="dashboard-section bg-light">
+      <div className="container space-2">
         <div className="card-deck d-block d-lg-flex card-lg-gutters-3 mb-5">
           <div className="card mb-3 mb-lg-0">
             <div className="card-body p-5">
@@ -72,6 +75,11 @@ const ProfileDashboard = () => {
           <div className="card-deck d-block d-lg-flex card-lg-gutters-3">
             {serviceData?.length > 0 && serviceData}
           </div>
+        </div>
+        <div className="card-deck d-block d-lg-flex card-lg-gutters-3">
+          <Deposits />
+          <Balance />
+          <Activity />
         </div>
       </div>
     </section>
