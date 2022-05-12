@@ -21,6 +21,7 @@ import TermsCondition from "../Pages/TermsCondition";
 import { getToken } from "./LocalStorage";
 import Main from "./Main";
 import routes from "./routes";
+import Faq from "../Pages/FAQ/Faq";
 
 const PublicRoute = ({ component: Component, ...rest }) => (
   <Route
@@ -110,6 +111,12 @@ const Full = (props) => {
           path={routes.policy}
           name="privacy-policy"
           component={PrivacyPolicy}
+        />
+        <Route
+          exact
+          path={routes.faq}
+          name="faq"
+          component={Faq}
         />
         <Route
           exact

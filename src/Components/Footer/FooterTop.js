@@ -72,7 +72,7 @@ const FooterTop = () => {
             <ul className="list-group list-group-flush list-group-borderless mb-0">
               <li>
                 <Link
-                  to={routes.home}
+                  to={routes.faq}
                   className="list-group-item list-group-item-action"
                 >
                   FAQ

@@ -8,6 +8,7 @@ const routes = {
   profile: "/profile",
   terms: "/terms-condition",
   policy: "/privacy-policy",
+  faq: "/faq",
   notFound: "/404",
   contactUs: "/contact-us",
   aboutUs: "/about-us",
