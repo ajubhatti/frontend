@@ -12,7 +12,7 @@ import Menu from "./Menu";
 const ProfileDashboard = () => {
   const serviceData =
     services.length > 0 &&
-    services.map((service) => {
+    services.slice(0, 3).map((service) => {
       return <ServiceCard key={service.id} {...service} />;
     });
 
@@ -25,7 +25,7 @@ const ProfileDashboard = () => {
             <div className="card mb-3 mb-lg-0">
               <div className="card-body p-5">
                 <div className="media align-items-center">
-                  <span className="btn-lg btn-icon btn-soft-primary rounded-circle mr-4">
+                  <span className="btn-lg btn-icon btn-soft-primary rounded-circle mr-4 d-flex justify-content-center align-items-center">
                     <CurrencyDollar />
                   </span>
                   <div className="media-body">
@@ -40,7 +40,7 @@ const ProfileDashboard = () => {
             <div className="card mb-3 mb-lg-0">
               <div className="card-body p-5">
                 <div className="media align-items-center">
-                  <span className="btn-lg btn-icon btn-soft-success rounded-circle mr-4">
+                  <span className="btn-lg btn-icon btn-soft-success rounded-circle mr-4 d-flex justify-content-center align-items-center">
                     <Coin />
                   </span>
                   <div className="media-body">
@@ -55,7 +55,7 @@ const ProfileDashboard = () => {
             <div className="card">
               <div className="card-body p-5">
                 <div className="media align-items-center">
-                  <span className="btn-lg btn-icon btn-soft-warning rounded-circle mr-4">
+                  <span className="btn-lg btn-icon btn-soft-warning rounded-circle mr-4 d-flex justify-content-center align-items-center">
                     <CurrencyExchange />
                   </span>
                   <div className="media-body">

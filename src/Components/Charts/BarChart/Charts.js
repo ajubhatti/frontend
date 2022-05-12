@@ -1,41 +1,25 @@
 import React from "react";
 
-const Charts = (props) => {
-  const data = props.data;
-
-  let max = 0;
-  for (var i = data.length; i--; ) {
-    if (data[i] > max) {
-      max = data[i];
-    }
-  }
+const Charts = ({ data }) => {
+  const barChartData = data.map((x, index) => {
+    return (
+      <div class="col-3" key={index}>
+        <div class="progress-vertical rounded mb-2">
+          <div
+            class="bg-primary rounded-bottom"
+            style={{ height: `${x.value}%` }}
+          ></div>
+        </div>
+        <div class="text-center">
+          <h4 class="small mb-0">{x.label}</h4>
+        </div>
+      </div>
+    );
+  });
 
   return (
-    <div className={"Charts"}>
-      <div
-        className={"Charts--serie"}
-        style={{ height: props.height ? props.height : "auto" }}
-      >
-        {data.map((item, itemIndex) => {
-          var color = props.colors[itemIndex],
-            style,
-            size = (item / max) * 100;
-
-          style = {
-            backgroundColor: color,
-            opacity: item / max + 0.05,
-            zIndex: item,
-          };
-
-          style["height"] = size + "%";
-          return (
-            <div className={"Charts--item "} style={style} key={itemIndex}>
-              <b style={{ color: color }}>{item}</b>
-              <label>{props.labels[itemIndex]}</label>
-            </div>
-          );
-        })}
-      </div>
+    <div class="row">
+      {barChartData.length > 0 ? barChartData : "No Data Available"}
     </div>
   );
 };

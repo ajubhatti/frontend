@@ -68,6 +68,13 @@ export const services = [
   },
 ];
 
+export const statusColor = [
+  { status: "progress", colorName: "primary" },
+  { status: "complete", colorName: "success" },
+  { status: "pending", colorName: "warning" },
+  { status: "cancel", colorName: "danger" },
+];
+
 export const columns = [
   {
     name: "index",
@@ -198,5 +205,40 @@ export const data = [
     amount: 123,
     date: "2-3-2022",
     status: "pending",
+  },
+];
+
+export const TransactionActivity = [
+  {
+    id: 1,
+    title: "Mobile Recharge",
+    description: "Vi recharge",
+    amount: "499",
+    time: "30 min",
+    status: "progress",
+  },
+  {
+    id: 2,
+    title: "DTH Recharge",
+    description: "Sun recharge",
+    amount: "720",
+    time: "40 min",
+    status: "complete",
+  },
+  {
+    id: 3,
+    title: "DataCard Recharge",
+    description: "Artel recharge",
+    amount: "7500",
+    time: "42 min",
+    status: "pending",
+  },
+  {
+    id: 4,
+    title: "Landline Bill",
+    description: "Artel recharge",
+    amount: "270",
+    time: "1 hr",
+    status: "cancel",
   },
 ];
