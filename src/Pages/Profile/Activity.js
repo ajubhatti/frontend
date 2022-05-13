@@ -49,7 +49,7 @@ const Activity = () => {
             >
               <div
                 className="mCSB_container"
-                style={{ position: "relative", top: "0", left: "0" }}
+                style={{ maxHeight: "300px", overflowY: "scroll" }}
               >
                 <ul className="list-unstyled u-indicator-vertical-dashed">
                   {ActivityList.length > 0

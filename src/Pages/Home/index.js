@@ -8,6 +8,9 @@ import icon39 from "../../Assets/icon39.svg";
 import icon20 from "../../Assets/icon20.svg";
 import visaCard from "../../Assets/visa-card.svg";
 import ieCirclesCta from "../../Assets/ie-circles-cta.svg";
+import marketingStrategy from "../../Assets/marketingStrategy.svg";
+import appDevelopment from "../../Assets/appDevelopment.svg";
+import businessAnalysis from "../../Assets/businessAnalysis.svg";
 
 const Home = (props) => {
   const [bannerList, setBannerList] = useState([]);
@@ -32,80 +35,107 @@ const Home = (props) => {
 
   return (
     <>
-      {/* <Banner bannerList={bannerList} />
-      <marquee>
-        {tickerList.map((theElement) => theElement.description.toString())}
-      </marquee> */}
-      <div className="container space-2 space-top-lg-3">
-        <div className="row justify-content-lg-between align-items-lg-center">
-          <div className="col-lg-5 mb-9 mb-lg-0">
-            <div className="mb-5">
-              <h2 className="font-weight-medium mb-4">
-                Fast And Safe Mobile Recharge On badipay
+      <Banner bannerList={bannerList} />
+      <div className="space-2">
+        <marquee>
+          <div className="row">
+            {tickerList.map((theElement) => {
+              return (
+                <span className="d-block text-secondary text-uppercase">
+                  {theElement.description.toString()}
+                </span>
+              );
+            })}
+          </div>
+        </marquee>
+      </div>
+      <div class="container space-2">
+        <div class="row align-items-lg-center">
+          <div class="col-lg-5 mb-7 mb-lg-0">
+            <div class="pr-lg-4">
+              <span class="btn btn-icon btn-soft-primary rounded-circle mb-3">
+                <span class="small font-weight-semi-bold btn-icon__inner">
+                  01.
+                </span>
+              </span>
+              <h2 class="h4 font-weight-semi-bold text-primary">
+                Smart evaluation model
               </h2>
-              <p>
-                badipay offers a mobile recharge option through which you can
-                make a postpaid, prepaid mobile recharge, utility bill payments,
-                metro recharge, etc. It is an instant and easy recharging
-                process, a secure and safe payment option, and offers a
-                hassle-free online experience.
+              <p class="mb-0">
+                Sophisticated model providing analysis for the entire blockchain
+                asset ecosystem. Strategic insights based on research,
+                trends,and 50+ unique indicators to properly evaluate investment
+                potential and risk.
               </p>
             </div>
           </div>
 
-          <div className="col-lg-6">
-            <div
-              id="featuresSVG"
-              className="position-relative max-width-50 mx-auto"
-            >
-              <div className="w-75 u-devices-v2__phone-svg shadow-sm mx-auto"></div>
-              <div className="position-absolute bottom-0 right-0 max-width-50 w-100 z-index-n1 mx-auto"></div>
-            </div>
+          <div id="SVGmarketingStrategy" class="col-lg-7">
+            <figure class="ie-marketing-strategy">
+              <img src={marketingStrategy} alt="" />
+            </figure>
           </div>
         </div>
       </div>
-      <div className="container space-2 space-top-lg-3">
-        <div className="row justify-content-lg-between align-items-lg-center">
-          <div className="col-lg-5 order-lg-2 mb-9 mb-lg-0">
-            <div className="mb-5">
-              <h2 className="font-weight-medium mb-4">
-                Get Exclusive Badipay Recharge Offers & Cashback
+      <div class="container space-1">
+        <div class="row align-items-lg-center">
+          <div class="col-lg-5 order-lg-2 mb-7 mb-lg-0">
+            <div class="pl-lg-4">
+              <span class="btn btn-icon btn-soft-primary rounded-circle mb-3">
+                <span class="small font-weight-semi-bold btn-icon__inner">
+                  02.
+                </span>
+              </span>
+              <h2 class="h4 font-weight-semi-bold text-primary">
+                Safe. Stable. Secure.
               </h2>
-              <p>
-                Browse through the Recommended Plans, Data Plans(2G,3G,4G), Full
-                Talktime Plans data plans, Roaming Plans, Special Plans, and
-                many more and grab the best offers on all recharges.
-              </p>
-              <p>
-                Not only can you get the best recharge offers and plans for all
-                the major operators on Badipay, you also get exclusive offers.
-                These offers are applicable on Jio Prepaid recharge offers and
-                plans, Airtel Prepaid plans and offers, BSNL recharge plans and
-                offers, VI plans and offers, etc.
-              </p>
-              <p>
-                With every mobile recharge through Badipay, you earn assured
-                cashback up to ₹1000 without any promo code. Additionally,
-                Badipay releases daily and occasional promo codes from time to
-                time to give you additional exclusive benefits on your prepaid
-                mobile recharges. You can also take the advantage of exclusive
-                bank offers when available.
+              <p class="mb-0">
+                Advanced distributed system architecture built to protect
+                against DDoS and other potential threats. More than 98% of
+                digital assets stored in multi-signature,cold wallets. Security
+                protocols are fully aligned and compliant with industry best
+                practices.
               </p>
             </div>
           </div>
 
-          <div className="col-lg-6 order-lg-1">
-            <div
-              id="featuresSVG2"
-              className="position-relative max-width-50 mx-auto"
-            >
-              <div className="w-75 u-devices-v2__phone-svg shadow-sm mx-auto"></div>
-              <div className="position-absolute bottom-0 left-0 right-0 max-width-50 w-100 z-index-n1 mx-auto mb-n5"></div>
-            </div>
+          <div id="SVGappDevelopment" class="col-lg-7 order-lg-1">
+            <figure class="ie-app-development">
+              <img src={appDevelopment} alt="" />
+            </figure>
           </div>
         </div>
       </div>
-      <div className="container space-2 space-lg-3">
+      <div class="container space-2">
+        <div class="row align-items-lg-center">
+          <div class="col-lg-5 mb-7 mb-lg-0">
+            <div class="pr-lg-4">
+              <span class="btn btn-icon btn-soft-primary rounded-circle mb-3">
+                <span class="small font-weight-semi-bold btn-icon__inner">
+                  03.
+                </span>
+              </span>
+              <h2 class="h4 font-weight-semi-bold text-primary">
+                Now, zero fees for everyone
+              </h2>
+              <p class="mb-0">
+                Empowering millions of users, across 130+ countries. Over $1
+                Billion in assets. 24/7/365 customer access and support. A
+                trusted world-class operation designed specifically for
+                knowledgeable crypto-investors.
+              </p>
+            </div>
+          </div>
+
+          <div id="SVGbusinessAnalysis" class="col-lg-7">
+            <figure class="ie-business-analysis">
+              <img src={businessAnalysis} alt="" />
+            </figure>
+          </div>
+        </div>
+      </div>
+
+      <div className="container space-2">
         <div className="w-lg-50 text-center mx-lg-auto mb-9">
           <h2 className="font-weight-medium mb-4">
             Always know what you'll pay.
@@ -229,7 +259,7 @@ const Home = (props) => {
           </div>
         </div>
       </div>
-      <div className="container space-2 space-top-lg-3 space-bottom-lg-3">
+      <div className="container space-2">
         <div className="w-lg-50 text-center mx-lg-auto mb-5">
           <h2 className="font-weight-medium mb-4">
             Simple and affordable.

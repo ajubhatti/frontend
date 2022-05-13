@@ -21,7 +21,7 @@ const Table = () => {
         defaultSortField="id"
         defaultSortAsc={false}
         pagination
-        highlightOnHover
+        // highlightOnHover
       />
     </DataTableExtensions>
   );

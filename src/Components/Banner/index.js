@@ -17,6 +17,7 @@ const Banner = ({ bannerList }) => {
   };
 
   const settings = {
+    arrow: false,
     dots: true,
     infinite: true,
     speed: 500,
@@ -24,12 +25,14 @@ const Banner = ({ bannerList }) => {
     slidesToScroll: 1,
   };
   return (
-    <Slider {...settings}>
-      {bannerList.length > 0 &&
-        bannerList.map((imgDt, index) => {
-          return <div key={index}>{ShowImage(imgDt.img, index)}</div>;
-        })}
-    </Slider>
+    <div className="container">
+      <Slider {...settings}>
+        {bannerList.length > 0 &&
+          bannerList.map((imgDt, index) => {
+            return <div key={index}>{ShowImage(imgDt.img, index)}</div>;
+          })}
+      </Slider>
+    </div>
   );
 };
 

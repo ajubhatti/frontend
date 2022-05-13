@@ -1,11 +1,16 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { getUser } from "../../Helper/LocalStorage";
+import LocalStorage, { getUser } from "../../Helper/LocalStorage";
 import routes from "../../Helper/routes";
 import ProfileImg from "../../Assets/profile.png";
 
 const Menu = () => {
   const userDetails = getUser();
+
+  const logout = async () => {
+    LocalStorage.clean();
+  };
+
   return (
     <div className="bg-primary">
       <div className="container space-top-1 pb-3">
@@ -74,6 +79,14 @@ const Menu = () => {
                       >
                         Activity
                       </Link>
+                    </li>
+                    <li className="nav-item u-header__nav-item">
+                      <span
+                        className="nav-link u-header__nav-link u-header__nav-link-toggle"
+                        onClick={logout}
+                      >
+                        Logout
+                      </span>
                     </li>
                   </ul>
                 </div>

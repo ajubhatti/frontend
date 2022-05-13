@@ -24599,3 +24599,76 @@ label.btn {
     opacity: 1;
   }
 }
+
+.mCSB_container::-webkit-scrollbar {
+  width: 4px;
+}
+
+.mCSB_container::-webkit-scrollbar-thumb {
+  background: #f1f1f1;
+}
+
+.rdt_TableHead {
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.rdt_TableRow {
+  background: #f8fafd;
+  border: 0 !important;
+}
+.rdt_TableCell {
+  padding: 0.75rem;
+  font-size: 0.875rem;
+  font-weight: 400;
+}
+
+.sc-llJcti.gnaqej {
+  color: #377dff;
+  background: rgba(55, 125, 255, 0.1);
+  border-color: transparent;
+  padding: 0.625rem 1.125rem;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  border-radius: 0.25rem;
+  display: inline-block;
+  font-weight: 500;
+  vertical-align: middle;
+  user-select: none;
+  border: 1px solid transparent;
+  transition: all 0.2s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sc-llJcti.gnaqej svg {
+  top: 10px;
+  right: 10px;
+}
+
+span.sc-bZkfAO.sc-ikZpkk.lmGpws.kBhHpT {
+  display: none;
+}
+
+.bvxQGL {
+  z-index: 1;
+  color: #fff;
+  background-color: #377dff;
+  border-color: #377dff;
+  border-radius: 13px;
+  display: flex;
+  justify-content: center;
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
+}
+.bvxQGL svg {
+  fill: #fff;
+}
+
+.bvxQGL:disabled {
+  opacity: 0.6;
+}
+
+.rdt_TableRow:nth-child(odd) {
+  background-color: #f8fafd;
+}

@@ -98,14 +98,7 @@ export const columns = [
     sortable: true,
     cell: (d) => (
       <div className="align-middle">
-        <div className="media align-items-center">
-          <span className="btn btn-sm btn-icon btn-soft-success rounded-circle mr-2">
-            <span className="btn-icon__inner font-weight-medium">
-              {d.title.charAt(0)}
-            </span>
-          </span>
-          <span>{d.title}</span>
-        </div>
+        <span>{d.title}</span>
       </div>
     ),
   },
@@ -164,7 +157,7 @@ export const data = [
     title: "DataCard Recharge",
     amount: 123,
     date: "2-3-2022",
-    status: "fail",
+    status: "	Rejected",
   },
   {
     id: 4,
@@ -188,7 +181,7 @@ export const data = [
     title: "Electricity Bill",
     amount: 123,
     date: "2-3-2022",
-    status: "fail",
+    status: "	Rejected",
   },
   {
     id: 7,
@@ -200,6 +193,70 @@ export const data = [
   },
   {
     id: 8,
+    order: 123,
+    title: "Cable Recharge",
+    amount: 123,
+    date: "2-3-2022",
+    status: "pending",
+  },
+  {
+    id: 9,
+    order: 123,
+    title: "Mobile recharge",
+    amount: 123,
+    date: "2-3-2022",
+    status: "completed",
+  },
+  {
+    id: 10,
+    order: 123,
+    title: "DTH Recharge",
+    amount: 123,
+    date: "2-3-2022",
+    status: "pending",
+  },
+  {
+    id: 11,
+    order: 123,
+    title: "DataCard Recharge",
+    amount: 123,
+    date: "2-3-2022",
+    status: "	Rejected",
+  },
+  {
+    id: 12,
+    order: 123,
+    title: "Landline Bill",
+    amount: 123,
+    date: "2-3-2022",
+    status: "completed",
+  },
+  {
+    id: 13,
+    order: 123,
+    title: "Broadband Bill",
+    amount: 123,
+    date: "2-3-2022",
+    status: "completed",
+  },
+  {
+    id: 14,
+    order: 123,
+    title: "Electricity Bill",
+    amount: 123,
+    date: "2-3-2022",
+    status: "	Rejected",
+  },
+  {
+    id: 15,
+    order: 123,
+    title: "Gas Bill",
+    amount: 123,
+    date: "2-3-2022",
+    status: "completed",
+  },
+  {
+    id: 16,
     order: 123,
     title: "Cable Recharge",
     amount: 123,
