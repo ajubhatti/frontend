@@ -3,6 +3,8 @@ import Accordion from "../../Components/Accordion";
 import { DummyData } from "./DummyData";
 import icon15 from "../../Assets/icon15.svg";
 import icon4 from "../..//Assets/icon4.svg";
+import { Link } from "react-router-dom";
+import routes from "../../Helper/routes";
 
 const Faq = () => {
   return (
@@ -59,10 +61,10 @@ const Faq = () => {
                   We want to answer all of your queries. Get in touch and we'll
                   get back to you as soon as we can.
                 </p>
-                <a class="font-size-1" href="#">
+                <Link to={routes.contactUs} class="font-size-1">
                   Email us{" "}
                   <span class="fas fa-angle-right align-middle ml-2"></span>
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -78,10 +80,10 @@ const Faq = () => {
                   Have some technical questions? Hit us on community page or
                   just say hello.
                 </p>
-                <a class="font-size-1" href="#">
-                  Open ticket{" "}
+                <Link to={routes.contactUs} class="font-size-1">
+                  Get Supports{" "}
                   <span class="fas fa-angle-right align-middle ml-2"></span>
-                </a>
+                </Link>
               </div>
             </div>
           </div>
