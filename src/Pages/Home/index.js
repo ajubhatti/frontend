@@ -11,6 +11,12 @@ import ieCirclesCta from "../../Assets/ie-circles-cta.svg";
 import marketingStrategy from "../../Assets/marketingStrategy.svg";
 import appDevelopment from "../../Assets/appDevelopment.svg";
 import businessAnalysis from "../../Assets/businessAnalysis.svg";
+import Carousel from "../../Components/Carousel";
+
+import Banner1 from "../../Assets/banner1.jpg";
+import Banner2 from "../../Assets/banner2.jpg";
+import Banner3 from "../../Assets/banner3.jpg";
+import Banner4 from "../../Assets/banner4.jpg";
 
 const Home = (props) => {
   const [bannerList, setBannerList] = useState([]);
@@ -35,7 +41,15 @@ const Home = (props) => {
 
   return (
     <>
-      <Banner bannerList={bannerList} />
+      {/* <Banner bannerList={bannerList} /> */}
+      <Carousel
+        carouselItems={[
+          <img src={Banner1} alt="" />,
+          <img src={Banner2} alt="" />,
+          <img src={Banner3} alt="" />,
+          <img src={Banner4} alt="" />,
+        ]}
+      />
       <div className="space-2">
         <marquee>
           <div className="row">

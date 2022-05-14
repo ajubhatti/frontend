@@ -15,7 +15,7 @@ const Header = () => {
     { title: "My Profile", link: routes.profileDashboard },
   ];
   return (
-    <header className="u-header">
+    <header className="u-header u-header-center-aligned-nav u-header--bg-transparent u-header--white-nav-links-md u-header--sub-menu-dark-bg-md u-header--abs-top">
       <div className="u-header__section">
         <div className="container">
           <nav className="navbar navbar-expand-md u-header__navbar u-header__navbar--no-space hs-menu-initialized hs-menu-horizontal">

@@ -17,15 +17,17 @@ const Banner = ({ bannerList }) => {
   };
 
   const settings = {
-    arrow: false,
+    arrow: true,
     dots: true,
     infinite: true,
-    speed: 500,
+    speed: 300,
     slidesToShow: 1,
     slidesToScroll: 1,
+    autoplay: true,
   };
+
   return (
-    <div className="container">
+    <div className="u-hero-v1">
       <Slider {...settings}>
         {bannerList.length > 0 &&
           bannerList.map((imgDt, index) => {
