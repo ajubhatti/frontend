@@ -3441,10 +3441,6 @@ input[type="button"].btn-block {
   display: none;
 }
 
-.collapse.show {
-  display: none;
-}
-
 .collapsing {
   position: relative;
   height: 0;
@@ -24671,4 +24667,8 @@ span.sc-bZkfAO.sc-ikZpkk.lmGpws.kBhHpT {
 
 .rdt_TableRow:nth-child(odd) {
   background-color: #f8fafd;
+}
+
+.pointer{
+  cursor: pointer !important;
 }
