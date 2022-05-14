@@ -6,7 +6,7 @@ import FaxIcon from "../../Assets/fax.svg";
 import ContactCard from "./ContactCard";
 import ContactForm from "./ContactForm";
 
-const ContactUs = () => {
+const ContactUs = (props) => {
   const cards = [
     {
       title: "Address",
@@ -30,28 +30,31 @@ const ContactUs = () => {
     },
   ];
   return (
-    <div className="space-2 space-top-md-4 space-top-lg-3">
-      <div className="w-lg-80 text-center mx-lg-auto">
-        <div className="mb-11">
-          <h1 className="display-4 font-weight-semi-bold">Got a question?</h1>
-          <p className="lead font-weight-normal">
-            How can Badipay assistants help you? Whether you have questions or
-            you would just like to say hello, contact us.
-          </p>
+    <>
+      <div className="space-2 space-top-md-4 space-top-lg-3">
+        <div className="w-lg-80 text-center mx-lg-auto">
+          <div className="mb-11">
+            <h1 className="display-4 font-weight-semi-bold">Got a question?</h1>
+            <p className="lead font-weight-normal">
+              How can Badipay assistants help you? Whether you have questions or
+              you would just like to say hello, contact us.
+            </p>
+          </div>
         </div>
-      </div>
 
-      <div className="clearfix space-2">
-        <div className="row no-gutters">
-          {cards.length > 0 &&
-            cards.map((item) => {
-              return <ContactCard key={item.title} {...item} />;
-            })}
+        <div className="clearfix space-2">
+          <div className="row no-gutters">
+            {cards.length > 0 &&
+              cards.map((item) => {
+                return <ContactCard key={item.title} {...item} />;
+              })}
+          </div>
         </div>
+        <hr className="my-0" />
+        <ContactForm {...props} />
       </div>
-      <hr className="my-0" />
-      <ContactForm />
-    </div>
+      <hr className="my-0"/>
+    </>
   );
 };
 

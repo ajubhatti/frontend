@@ -1,14 +1,10 @@
 import React from "react";
 import VectorImg from "../../Assets/vector.png";
 import LoginForm from "./LoginForm";
-import "./Login.css";
 
 const Login = (props) => {
   return (
-    <section className="banner login-registration">
-      <div className="vector-img">
-        <img src={VectorImg} alt="" />
-      </div>
+    <div className="space-2">
       <div className="container">
         <div className="row">
           <div className="col-md-6">
@@ -20,9 +16,14 @@ const Login = (props) => {
             </div>
             <LoginForm {...props} />
           </div>
+          <div className="col-md-6">
+            <div className="vector-img">
+              <img src={VectorImg} alt="" className="w-100" />
+            </div>
+          </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 

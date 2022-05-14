@@ -51,13 +51,9 @@ const ResetForm = (props) => {
     }
   };
   return (
-    <Form
-      name="reset-password-form"
-      submitHandler={submitHandler}
-      className="sl-form"
-    >
+    <Form name="reset-password-form" submitHandler={submitHandler}>
       <div className="form-group">
-        <label>Password</label>
+        <label className="form-label">Password</label>
         <input
           type="password"
           placeholder="Password"
@@ -75,7 +71,7 @@ const ResetForm = (props) => {
         )}
       </div>
       <div className="form-group">
-        <label>Conform Password</label>
+        <label className="form-label">Conform Password</label>
         <input
           type="password"
           placeholder="Conform Password"
@@ -93,11 +89,12 @@ const ResetForm = (props) => {
         )}
       </div>
       <button
-        className="btn btn-filled btn-round"
+        type="submit"
+        className="btn btn-primary transition-3d-hover"
         onClick={submitHandler}
         disabled={apiCall}
       >
-        <span>{apiCall ? "Loading..." : "Reset Password"}</span>
+        Get Started
       </button>
     </Form>
   );

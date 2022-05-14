@@ -49,19 +49,19 @@ const Home = (props) => {
           </div>
         </marquee>
       </div>
-      <div class="container space-2">
-        <div class="row align-items-lg-center">
-          <div class="col-lg-5 mb-7 mb-lg-0">
-            <div class="pr-lg-4">
-              <span class="btn btn-icon btn-soft-primary rounded-circle mb-3">
-                <span class="small font-weight-semi-bold btn-icon__inner">
+      <div className="container space-2">
+        <div className="row align-items-lg-center">
+          <div className="col-lg-5 mb-7 mb-lg-0">
+            <div className="pr-lg-4">
+              <span className="btn btn-icon btn-soft-primary rounded-circle mb-3">
+                <span className="small font-weight-semi-bold btn-icon__inner">
                   01.
                 </span>
               </span>
-              <h2 class="h4 font-weight-semi-bold text-primary">
+              <h2 className="h4 font-weight-semi-bold text-primary">
                 Smart evaluation model
               </h2>
-              <p class="mb-0">
+              <p className="mb-0">
                 Sophisticated model providing analysis for the entire blockchain
                 asset ecosystem. Strategic insights based on research,
                 trends,and 50+ unique indicators to properly evaluate investment
@@ -70,26 +70,26 @@ const Home = (props) => {
             </div>
           </div>
 
-          <div id="SVGmarketingStrategy" class="col-lg-7">
-            <figure class="ie-marketing-strategy">
+          <div id="SVGmarketingStrategy" className="col-lg-7">
+            <figure className="ie-marketing-strategy">
               <img src={marketingStrategy} alt="" />
             </figure>
           </div>
         </div>
       </div>
-      <div class="container space-1">
-        <div class="row align-items-lg-center">
-          <div class="col-lg-5 order-lg-2 mb-7 mb-lg-0">
-            <div class="pl-lg-4">
-              <span class="btn btn-icon btn-soft-primary rounded-circle mb-3">
-                <span class="small font-weight-semi-bold btn-icon__inner">
+      <div className="container space-1">
+        <div className="row align-items-lg-center">
+          <div className="col-lg-5 order-lg-2 mb-7 mb-lg-0">
+            <div className="pl-lg-4">
+              <span className="btn btn-icon btn-soft-primary rounded-circle mb-3">
+                <span className="small font-weight-semi-bold btn-icon__inner">
                   02.
                 </span>
               </span>
-              <h2 class="h4 font-weight-semi-bold text-primary">
+              <h2 className="h4 font-weight-semi-bold text-primary">
                 Safe. Stable. Secure.
               </h2>
-              <p class="mb-0">
+              <p className="mb-0">
                 Advanced distributed system architecture built to protect
                 against DDoS and other potential threats. More than 98% of
                 digital assets stored in multi-signature,cold wallets. Security
@@ -99,26 +99,26 @@ const Home = (props) => {
             </div>
           </div>
 
-          <div id="SVGappDevelopment" class="col-lg-7 order-lg-1">
-            <figure class="ie-app-development">
+          <div id="SVGappDevelopment" className="col-lg-7 order-lg-1">
+            <figure className="ie-app-development">
               <img src={appDevelopment} alt="" />
             </figure>
           </div>
         </div>
       </div>
-      <div class="container space-2">
-        <div class="row align-items-lg-center">
-          <div class="col-lg-5 mb-7 mb-lg-0">
-            <div class="pr-lg-4">
-              <span class="btn btn-icon btn-soft-primary rounded-circle mb-3">
-                <span class="small font-weight-semi-bold btn-icon__inner">
+      <div className="container space-2">
+        <div className="row align-items-lg-center">
+          <div className="col-lg-5 mb-7 mb-lg-0">
+            <div className="pr-lg-4">
+              <span className="btn btn-icon btn-soft-primary rounded-circle mb-3">
+                <span className="small font-weight-semi-bold btn-icon__inner">
                   03.
                 </span>
               </span>
-              <h2 class="h4 font-weight-semi-bold text-primary">
+              <h2 className="h4 font-weight-semi-bold text-primary">
                 Now, zero fees for everyone
               </h2>
-              <p class="mb-0">
+              <p className="mb-0">
                 Empowering millions of users, across 130+ countries. Over $1
                 Billion in assets. 24/7/365 customer access and support. A
                 trusted world-class operation designed specifically for
@@ -127,8 +127,8 @@ const Home = (props) => {
             </div>
           </div>
 
-          <div id="SVGbusinessAnalysis" class="col-lg-7">
-            <figure class="ie-business-analysis">
+          <div id="SVGbusinessAnalysis" className="col-lg-7">
+            <figure className="ie-business-analysis">
               <img src={businessAnalysis} alt="" />
             </figure>
           </div>
@@ -250,10 +250,10 @@ const Home = (props) => {
               <img src={iconGrowingBusiness} alt="" />
             </figure>
             <div className="media-body">
-              <h4 className="h6">Grow your business with Badi Pay</h4>
+              <h4 className="h6">Grow your business with BadiPay</h4>
               <p>
                 From startups to Fortune 500s, explore how millions of
-                businesses use Badi Pay to start and scale their companies.
+                businesses use BadiPay to start and scale their companies.
               </p>
             </div>
           </div>
@@ -268,7 +268,7 @@ const Home = (props) => {
           </h2>
           <p>
             From boarding passes to movie tickets, there's pretty much nothing
-            you can't store with Badi Pay. Plus, you can take your money further
+            you can't store with BadiPay. Plus, you can take your money further
             with exclusive offers, discounts, and even reminders to use your
             loyalty card when you enter the store.
           </p>

@@ -11,3 +11,7 @@ export const home = {
   banner: { method: "get", url: "/banner" },
   ticker: { method: "get", url: "/ticker" },
 };
+
+export const extra = {
+  contact: { method: "get", url: "/contact" },
+};

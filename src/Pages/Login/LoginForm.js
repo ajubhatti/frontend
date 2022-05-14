@@ -35,9 +35,9 @@ const LoginForm = (props) => {
   };
 
   return (
-    <Form name="login-form" submitHandler={submitHandler} className="sl-form">
+    <Form name="login-form" submitHandler={submitHandler}>
       <div className="form-group">
-        <label className="form-label">Email or Username</label>
+        <label className="form-label">Email</label>
         <input
           type="email"
           placeholder="example@gmail.com"

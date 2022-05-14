@@ -14,7 +14,7 @@ import ResetPasswordContainer from "../Containers/ResetPassword";
 import verifyEmailContainer from "../Containers/verifyEmail";
 import ReferContainer from "../Containers/Refer";
 import AboutUs from "../Pages/AboutUs";
-import ContactUs from "../Pages/ContactUs";
+import ContactContainer from "../Containers/ContactUs";
 import PageNotFound from "../Pages/PageNotFound";
 import PrivacyPolicy from "../Pages/PrivacyPolicy";
 import TermsCondition from "../Pages/TermsCondition";
@@ -112,12 +112,7 @@ const Full = (props) => {
           name="privacy-policy"
           component={PrivacyPolicy}
         />
-        <Route
-          exact
-          path={routes.faq}
-          name="faq"
-          component={Faq}
-        />
+        <Route exact path={routes.faq} name="faq" component={Faq} />
         <Route
           exact
           path={routes.notFound}
@@ -128,7 +123,7 @@ const Full = (props) => {
           exact
           path={routes.contactUs}
           name="contact-us"
-          component={ContactUs}
+          component={ContactContainer}
         />
         <Route
           exact

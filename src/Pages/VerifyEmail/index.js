@@ -3,10 +3,7 @@ import VectorImg from "../../Assets/vector.png";
 
 const VerifyEmail = (props) => {
   return (
-    <section className="banner login-registration">
-      <div className="vector-img">
-        <img src={VectorImg} alt="" />
-      </div>
+    <div className="space-2">
       <div className="container">
         <div className="row">
           <div className="col-md-6">
@@ -18,9 +15,14 @@ const VerifyEmail = (props) => {
             </div>
             {/* content here */}
           </div>
+          <div className="col-md-6">
+            <div className="vector-img">
+              <img src={VectorImg} alt="" className="w-100" />
+            </div>
+          </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 

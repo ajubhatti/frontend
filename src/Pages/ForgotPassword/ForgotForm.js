@@ -1,6 +1,8 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
 import Form from "../../Components/Form";
+import routes from "../../Helper/routes";
 
 const ForgotForm = (props) => {
   const [apiCall, setApiCall] = useState(false);
@@ -33,7 +35,7 @@ const ForgotForm = (props) => {
       className="sl-form"
     >
       <div className="form-group">
-        <label>Email</label>
+        <label className="form-label">Email</label>
         <input
           type="email"
           placeholder="example@gmail.com"
@@ -49,13 +51,24 @@ const ForgotForm = (props) => {
           <div className="invalid-feedback">Email is required</div>
         )}
       </div>
-      <button
-        className="btn btn-filled btn-round"
-        onClick={submitHandler}
-        disabled={apiCall}
-      >
-        <span>{apiCall ? "Loading..." : "Submit"}</span>
-      </button>
+      <div className="row align-items-center mb-5">
+        <div className="col-4 col-sm-6">
+          <Link to={routes.login} className="small link-muted">
+            Back to sign in
+          </Link>
+        </div>
+
+        <div className="col-8 col-sm-6 text-right">
+          <button
+            type="submit"
+            className="btn btn-primary transition-3d-hover"
+            onClick={submitHandler}
+            disabled={apiCall}
+          >
+            Request Reset Link
+          </button>
+        </div>
+      </div>
     </Form>
   );
 };

@@ -1,6 +1,47 @@
-import React from "react";
+import React, { useState } from "react";
+import { toast } from "react-toastify";
+import Form from "../../Components/Form";
 
-const ContactForm = () => {
+const ContactForm = (props) => {
+  const [apiCall, setApiCall] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
+  const [values, setValues] = useState({
+    fullName: "",
+    email: "",
+    subject: "",
+    phoneNumber: "",
+    reason: "",
+  });
+
+  const handlerChange = (event) => {
+    const { name, value } = event.target;
+    setValues((prevState) => ({
+      ...prevState,
+      [name]: value,
+    }));
+  };
+
+  const submitHandler = async (e) => {
+    e.preventDefault();
+    setApiCall(true);
+    setSubmitted(true);
+    if (
+      values.fullName !== "" &&
+      values.email !== "" &&
+      values.subject !== "" &&
+      values.phoneNumber !== "" &&
+      values.reason !== ""
+    ) {
+      try {
+        // await props.sendContactDetails(values).then((res) => {
+        //   toast.success(res.message);
+        // });
+      } finally {
+        setApiCall(false);
+      }
+    }
+  };
+
   return (
     <div className="container space-2 space-md-3">
       <div className="w-md-80 w-lg-50 text-center mx-md-auto mb-9">
@@ -17,26 +58,29 @@ const ContactForm = () => {
       </div>
 
       <div className="w-lg-80 mx-auto">
-        <form className="js-validate">
+        <Form name="login-form" submitHandler={submitHandler}>
           <div className="row">
             <div className="col-sm-6 mb-6">
               <div className="js-form-message">
                 <label className="form-label">
-                  Your name
+                  Full Name
                   <span className="text-danger">*</span>
                 </label>
-
                 <input
                   type="text"
-                  className="form-control"
-                  name="name"
-                  placeholder="Jack Wayley"
-                  aria-label="Jack Wayley"
-                  required=""
-                  data-msg="Please enter your name."
-                  data-error-className="u-has-error"
-                  data-success-className="u-has-success"
+                  placeholder="Jone done"
+                  required
+                  name="fullName"
+                  value={values.fullName}
+                  onChange={handlerChange}
+                  className={
+                    "form-control" +
+                    (submitted && !values.fullName ? " is-invalid" : "")
+                  }
                 />
+                {submitted && !values.fullName && (
+                  <div className="invalid-feedback">Please enter your name</div>
+                )}
               </div>
             </div>
             <div className="col-sm-6 mb-6">
@@ -45,18 +89,21 @@ const ContactForm = () => {
                   Your email address
                   <span className="text-danger">*</span>
                 </label>
-
                 <input
                   type="email"
-                  className="form-control"
+                  placeholder="example@gmail.com"
+                  required
                   name="email"
-                  placeholder="jackwayley@gmail.com"
-                  aria-label="jackwayley@gmail.com"
-                  required=""
-                  data-msg="Please enter a valid email address."
-                  data-error-className="u-has-error"
-                  data-success-className="u-has-success"
+                  value={values.email}
+                  onChange={handlerChange}
+                  className={
+                    "form-control" +
+                    (submitted && !values.email ? " is-invalid" : "")
+                  }
                 />
+                {submitted && !values.email && (
+                  <div className="invalid-feedback">Email is required</div>
+                )}
               </div>
             </div>
 
@@ -70,15 +117,19 @@ const ContactForm = () => {
 
                 <input
                   type="text"
-                  className="form-control"
+                  placeholder=""
+                  required
                   name="subject"
-                  placeholder="Web design"
-                  aria-label="Web design"
-                  required=""
-                  data-msg="Please enter a subject."
-                  data-error-className="u-has-error"
-                  data-success-className="u-has-success"
+                  value={values.subject}
+                  onChange={handlerChange}
+                  className={
+                    "form-control" +
+                    (submitted && !values.subject ? " is-invalid" : "")
+                  }
                 />
+                {submitted && !values.subject && (
+                  <div className="invalid-feedback">Please enter your name</div>
+                )}
               </div>
             </div>
             <div className="col-sm-6 mb-6">
@@ -87,23 +138,29 @@ const ContactForm = () => {
                   Your Phone Number
                   <span className="text-danger">*</span>
                 </label>
-
                 <input
-                  type="number"
-                  className="form-control"
-                  name="phone"
-                  placeholder="1-800-643-4500"
-                  aria-label="1-800-643-4500"
-                  required=""
-                  data-msg="Please enter a valid phone number."
-                  data-error-className="u-has-error"
-                  data-success-className="u-has-success"
+                  type="tel"
+                  name="phoneNumber"
+                  placeholder="123-45-678"
+                  pattern="[7-9]{1}[0-9]{9}"
+                  required
+                  value={values.phoneNumber}
+                  onChange={handlerChange}
+                  className={
+                    "form-control" +
+                    (submitted && !values.phoneNumber ? " is-invalid" : "")
+                  }
                 />
+                {submitted && !values.phoneNumber && (
+                  <div className="invalid-feedback">
+                    Phone Number is required
+                  </div>
+                )}
               </div>
             </div>
           </div>
 
-          <div className="js-form-message mb-6">
+          <div className="mb-6">
             <label className="form-label">
               How can we help you?
               <span className="text-danger">*</span>
@@ -111,16 +168,20 @@ const ContactForm = () => {
 
             <div className="input-group">
               <textarea
-                className="form-control"
                 rows="4"
-                name="text"
+                name="reason"
                 placeholder="Hi there, I would like to ..."
-                aria-label="Hi there, I would like to ..."
-                required=""
-                data-msg="Please enter a reason."
-                data-error-className="u-has-error"
-                data-success-className="u-has-success"
+                required
+                value={values.reason}
+                onChange={handlerChange}
+                className={
+                  "form-control" +
+                  (submitted && !values.reason ? " is-invalid" : "")
+                }
               ></textarea>
+              {submitted && !values.reason && (
+                <div className="invalid-feedback">Email is required</div>
+              )}
             </div>
           </div>
 
@@ -128,12 +189,13 @@ const ContactForm = () => {
             <button
               type="submit"
               className="btn btn-primary btn-wide transition-3d-hover mb-4"
+              disabled={apiCall}
             >
               Submit
             </button>
             <p className="small">We'll get back to you in 1-2 business days.</p>
           </div>
-        </form>
+        </Form>
       </div>
     </div>
   );
