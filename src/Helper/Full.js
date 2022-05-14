@@ -7,18 +7,21 @@ import HomeContainer from "../Containers/Home";
 import LoginContainer from "../Containers/Login";
 import ProfileContainer from "../Containers/Profile";
 import ProfileDashboardContainer from "../Containers/Profile/dashboard";
+import ProfileTransactionContainer from "../Containers/Profile/Transaction";
+import ChangePasswordContainer from "../Containers/Profile/ChangePassword";
 import RegisterContainer from "../Containers/Register";
 import ResetPasswordContainer from "../Containers/ResetPassword";
 import verifyEmailContainer from "../Containers/verifyEmail";
 import ReferContainer from "../Containers/Refer";
 import AboutUs from "../Pages/AboutUs";
-import ContactUs from "../Pages/ContactUs";
+import ContactContainer from "../Containers/ContactUs";
 import PageNotFound from "../Pages/PageNotFound";
 import PrivacyPolicy from "../Pages/PrivacyPolicy";
 import TermsCondition from "../Pages/TermsCondition";
 import { getToken } from "./LocalStorage";
 import Main from "./Main";
 import routes from "./routes";
+import Faq from "../Pages/FAQ/Faq";
 
 const PublicRoute = ({ component: Component, ...rest }) => (
   <Route
@@ -33,7 +36,7 @@ const PrivateRoute = ({ component: Component, ...rest }) => (
   <Route
     {...rest}
     render={(props) =>
-      getToken() ? <Component {...props} /> : <Redirect to={routes.home} />
+      getToken() ? <Component {...props} /> : <Redirect to={routes.login} />
     }
   />
 );
@@ -85,6 +88,18 @@ const Full = (props) => {
           path={routes.profileDashboard}
           component={ProfileDashboardContainer}
         />
+        <PrivateRoute
+          exact
+          name="account-transaction"
+          path={routes.profileTransaction}
+          component={ProfileTransactionContainer}
+        />
+        <PrivateRoute
+          exact
+          name="change-password"
+          path={routes.profileChangePassword}
+          component={ChangePasswordContainer}
+        />
         <Route
           exact
           path={routes.terms}
@@ -97,6 +112,7 @@ const Full = (props) => {
           name="privacy-policy"
           component={PrivacyPolicy}
         />
+        <Route exact path={routes.faq} name="faq" component={Faq} />
         <Route
           exact
           path={routes.notFound}
@@ -107,7 +123,7 @@ const Full = (props) => {
           exact
           path={routes.contactUs}
           name="contact-us"
-          component={ContactUs}
+          component={ContactContainer}
         />
         <Route
           exact
@@ -121,7 +137,7 @@ const Full = (props) => {
           name="refer"
           component={ReferContainer}
         />
-        <Redirect from="/" to={routes.home} />
+        {/* <Redirect from="/" to={routes.home} /> */}
         <Route path="*" exact component={PageNotFound} />
       </Switch>
     </Main>

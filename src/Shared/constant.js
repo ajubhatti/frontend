@@ -1,4 +1,13 @@
-import { Broadcast, CreditCard, Droplet, HddNetwork, Lightbulb, Phone, Telephone, Tv } from "react-bootstrap-icons";
+import {
+  Broadcast,
+  CreditCard,
+  Droplet,
+  HddNetwork,
+  Lightbulb,
+  Phone,
+  Telephone,
+  Tv,
+} from "react-bootstrap-icons";
 
 export const services = [
   {
@@ -56,5 +65,237 @@ export const services = [
     subTitle: "Cable Recharge",
     amount: "2350",
     icon: <Tv size={40} className="img-fluid" />,
+  },
+];
+
+export const statusColor = [
+  { status: "progress", colorName: "primary" },
+  { status: "complete", colorName: "success" },
+  { status: "pending", colorName: "warning" },
+  { status: "cancel", colorName: "danger" },
+];
+
+export const columns = [
+  {
+    name: "index",
+    selector: "id",
+    sortable: false,
+    Cell: (props) => <div>{props.page * 10 + props.index + 1}</div>,
+  },
+  {
+    name: "Order",
+    selector: "order",
+    sortable: true,
+    cell: (d) => (
+      <div className="align-middle text-secondary font-weight-normal">
+        #{d.order}
+      </div>
+    ),
+  },
+  {
+    name: "Title",
+    selector: "title",
+    sortable: true,
+    cell: (d) => (
+      <div className="align-middle">
+        <span>{d.title}</span>
+      </div>
+    ),
+  },
+  {
+    name: "Amount",
+    selector: "amount",
+    sortable: true,
+    cell: (d) => <div className="align-middle text-primary">${d.amount}</div>,
+  },
+  {
+    name: "Date",
+    selector: "date",
+    sortable: true,
+    cell: (d) => <div className="align-middle text-secondary">{d.date}</div>,
+  },
+  {
+    name: "Status",
+    selector: "status",
+    sortable: true,
+    cell: (d) => (
+      <div
+        className={`align-middle text-${
+          d.status === "completed"
+            ? "success"
+            : d.status === "pending"
+            ? "warning"
+            : "danger"
+        }`}
+      >
+        {d.status}
+      </div>
+    ),
+  },
+];
+
+export const data = [
+  {
+    id: 1,
+    order: 123,
+    title: "Mobile recharge",
+    amount: 123,
+    date: "2-3-2022",
+    status: "completed",
+  },
+  {
+    id: 2,
+    order: 123,
+    title: "DTH Recharge",
+    amount: 123,
+    date: "2-3-2022",
+    status: "pending",
+  },
+  {
+    id: 3,
+    order: 123,
+    title: "DataCard Recharge",
+    amount: 123,
+    date: "2-3-2022",
+    status: "	Rejected",
+  },
+  {
+    id: 4,
+    order: 123,
+    title: "Landline Bill",
+    amount: 123,
+    date: "2-3-2022",
+    status: "completed",
+  },
+  {
+    id: 5,
+    order: 123,
+    title: "Broadband Bill",
+    amount: 123,
+    date: "2-3-2022",
+    status: "completed",
+  },
+  {
+    id: 6,
+    order: 123,
+    title: "Electricity Bill",
+    amount: 123,
+    date: "2-3-2022",
+    status: "	Rejected",
+  },
+  {
+    id: 7,
+    order: 123,
+    title: "Gas Bill",
+    amount: 123,
+    date: "2-3-2022",
+    status: "completed",
+  },
+  {
+    id: 8,
+    order: 123,
+    title: "Cable Recharge",
+    amount: 123,
+    date: "2-3-2022",
+    status: "pending",
+  },
+  {
+    id: 9,
+    order: 123,
+    title: "Mobile recharge",
+    amount: 123,
+    date: "2-3-2022",
+    status: "completed",
+  },
+  {
+    id: 10,
+    order: 123,
+    title: "DTH Recharge",
+    amount: 123,
+    date: "2-3-2022",
+    status: "pending",
+  },
+  {
+    id: 11,
+    order: 123,
+    title: "DataCard Recharge",
+    amount: 123,
+    date: "2-3-2022",
+    status: "	Rejected",
+  },
+  {
+    id: 12,
+    order: 123,
+    title: "Landline Bill",
+    amount: 123,
+    date: "2-3-2022",
+    status: "completed",
+  },
+  {
+    id: 13,
+    order: 123,
+    title: "Broadband Bill",
+    amount: 123,
+    date: "2-3-2022",
+    status: "completed",
+  },
+  {
+    id: 14,
+    order: 123,
+    title: "Electricity Bill",
+    amount: 123,
+    date: "2-3-2022",
+    status: "	Rejected",
+  },
+  {
+    id: 15,
+    order: 123,
+    title: "Gas Bill",
+    amount: 123,
+    date: "2-3-2022",
+    status: "completed",
+  },
+  {
+    id: 16,
+    order: 123,
+    title: "Cable Recharge",
+    amount: 123,
+    date: "2-3-2022",
+    status: "pending",
+  },
+];
+
+export const TransactionActivity = [
+  {
+    id: 1,
+    title: "Mobile Recharge",
+    description: "Vi recharge",
+    amount: "499",
+    time: "30 min",
+    status: "progress",
+  },
+  {
+    id: 2,
+    title: "DTH Recharge",
+    description: "Sun recharge",
+    amount: "720",
+    time: "40 min",
+    status: "complete",
+  },
+  {
+    id: 3,
+    title: "DataCard Recharge",
+    description: "Artel recharge",
+    amount: "7500",
+    time: "42 min",
+    status: "pending",
+  },
+  {
+    id: 4,
+    title: "Landline Bill",
+    description: "Artel recharge",
+    amount: "270",
+    time: "1 hr",
+    status: "cancel",
   },
 ];

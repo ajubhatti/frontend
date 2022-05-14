@@ -6,3 +6,12 @@ export const auth = {
   resetPass: { method: "post", url: "/auth/reset-password" },
   verifyEmail: { method: "post", url: "/auth/verify-email" },
 };
+
+export const home = {
+  banner: { method: "get", url: "/banner" },
+  ticker: { method: "get", url: "/ticker" },
+};
+
+export const extra = {
+  contact: { method: "get", url: "/contact" },
+};

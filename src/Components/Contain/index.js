@@ -1,5 +1,3 @@
-import React from "react";
-
-const Contain = ({ children }) => <div className="contain"> {children}</div>;
+const Contain = ({ children }) => children;
 
 export default Contain;

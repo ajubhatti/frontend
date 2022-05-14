@@ -35,9 +35,9 @@ const LoginForm = (props) => {
   };
 
   return (
-    <Form name="login-form" submitHandler={submitHandler} className="sl-form">
+    <Form name="login-form" submitHandler={submitHandler}>
       <div className="form-group">
-        <label>Email or Username</label>
+        <label className="form-label">Email</label>
         <input
           type="email"
           placeholder="example@gmail.com"
@@ -54,7 +54,17 @@ const LoginForm = (props) => {
         )}
       </div>
       <div className="form-group">
-        <label>Password</label>
+        <label className="form-label">
+          <span className="d-flex justify-content-between align-items-center">
+            Password
+            <Link
+              to={routes.forgot}
+              className="link-muted text-capitalize font-weight-normal"
+            >
+              Forgot Password?
+            </Link>
+          </span>
+        </label>
         <input
           type="password"
           placeholder="Password"
@@ -71,19 +81,26 @@ const LoginForm = (props) => {
           <div className="invalid-feedback">Password is required</div>
         )}
       </div>
-      <div className="form-group">
-        <Link to={routes.forgot}>Forgot Password</Link>
+
+      <div className="row align-items-center mb-5">
+        <div className="col-6">
+          <span className="small text-muted">Don't have an account?</span>
+          <Link to={routes.register} className="small">
+            Signup
+          </Link>
+        </div>
+
+        <div className="col-6 text-right">
+          <button
+            type="submit"
+            className="btn btn-primary transition-3d-hover"
+            onClick={submitHandler}
+            disabled={apiCall}
+          >
+            Get Started
+          </button>
+        </div>
       </div>
-      <button
-        className="btn btn-filled btn-round"
-        onClick={submitHandler}
-        disabled={apiCall}
-      >
-        <span>{apiCall ? "Loading..." : "Login"}</span>
-      </button>
-      <p className="notice">
-        Don’t have an account? <Link to={routes.register}>Signup Now</Link>
-      </p>
     </Form>
   );
 };

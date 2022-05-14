@@ -11,6 +11,7 @@ const RegisterForm = (props) => {
     phoneNumber: "",
     email: "",
     password: "",
+    referrelId: "",
   });
 
   const handlerChange = (event) => {
@@ -48,7 +49,7 @@ const RegisterForm = (props) => {
       className="sl-form"
     >
       <div className="form-group">
-        <label>Full Name</label>
+        <label className="form-label">Full Name</label>
         <input
           type="text"
           placeholder="Jhone Doe"
@@ -66,7 +67,7 @@ const RegisterForm = (props) => {
         )}
       </div>
       <div className="form-group">
-        <label>Phone Number</label>
+        <label className="form-label">Phone Number</label>
         <input
           type="tel"
           name="phoneNumber"
@@ -85,7 +86,20 @@ const RegisterForm = (props) => {
         )}
       </div>
       <div className="form-group">
-        <label>Email</label>
+        <label className="form-label">
+          Referral Code <small className="text-muted">(optional)</small>
+        </label>
+        <input
+          type="text"
+          placeholder="XXXXXX"
+          name="userName"
+          value={values.referrelId}
+          onChange={handlerChange}
+          className="form-control"
+        />
+      </div>
+      <div className="form-group">
+        <label className="form-label">Email</label>
         <input
           type="email"
           placeholder="example@gmail.com"
@@ -102,7 +116,7 @@ const RegisterForm = (props) => {
         )}
       </div>
       <div className="form-group">
-        <label>Password</label>
+        <label className="form-label">Password</label>
         <input
           type="password"
           placeholder="Password"
@@ -119,22 +133,46 @@ const RegisterForm = (props) => {
           <div className="invalid-feedback">Password is required</div>
         )}
       </div>
-      <div className="form-check">
-        <input type="checkbox" className="form-check-input" />
-        <label className="form-check-label">
-          Agree with Terms and Conditions
-        </label>
+
+      <div className="mb-5">
+        <div className="custom-control custom-checkbox d-flex align-items-center text-muted">
+          <input
+            type="checkbox"
+            className="custom-control-input"
+            name="termsCheckbox"
+            required
+          />
+          <label className="custom-control-label" for="termsCheckbox">
+            <small>
+              I agree to the {""}
+              <Link to={routes.terms} className="link-muted">
+                Terms and Conditions
+              </Link>
+            </small>
+          </label>
+        </div>
       </div>
-      <button
-        className="btn btn-filled btn-round"
-        onClick={submitHandler}
-        disabled={apiCall}
-      >
-        <span>{apiCall ? "Loading..." : "Signup"}</span>
-      </button>
-      <p className="notice">
-        Already have an account? <Link to={routes.login}>Login Account</Link>
-      </p>
+
+      <div className="row align-items-center mb-5">
+        <div className="col-8">
+          <span className="small text-muted">Already have an account?</span>{" "}
+          {""}
+          <Link to={routes.login} className="small">
+            Login
+          </Link>
+        </div>
+
+        <div className="col-4 text-right">
+          <button
+            type="submit"
+            className="btn btn-primary transition-3d-hover"
+            onClick={submitHandler}
+            disabled={apiCall}
+          >
+            Get Started
+          </button>
+        </div>
+      </div>
     </Form>
   );
 };

@@ -1,29 +1,25 @@
 import React from "react";
-import VectorImg from "../../Assets/vector.png";
-import "./ForgotPassword.css";
 import ForgotForm from "./ForgotForm";
 
 const ForgotPassword = (props) => {
   return (
-    <section className="banner login-registration">
-      <div className="vector-img">
-        <img src={VectorImg} alt="" />
-      </div>
-      <div className="container">
-        <div className="row">
-          <div className="col-md-6">
-            <div className="content-box">
-              <h2>Forgot Password</h2>
-              <p>
-                Enter your email and we&apos;ll send you an email to reset your
-                password.
-              </p>
-            </div>
-            <ForgotForm {...props} />
+    <>
+      <div className="container space-2">
+        <div className="w-md-75 w-lg-50 mx-md-auto">
+          <div className="mb-7">
+            <h2 className="h3 text-primary font-weight-normal mb-0">
+              Forgot your{" "}
+              <span className="font-weight-semi-bold">password</span>
+            </h2>
+            <p>
+              Enter your email address below and we'll get you back on track.
+            </p>
           </div>
+          <ForgotForm {...props} />
         </div>
       </div>
-    </section>
+      <hr className="my-0" />
+    </>
   );
 };
 

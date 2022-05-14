@@ -2,16 +2,15 @@ import React from "react";
 import { FileEarmarkFill } from "react-bootstrap-icons";
 import { Link } from "react-router-dom";
 import routes from "../../Helper/routes";
-import "./Refer.css";
 import Analysis from "../../Assets/analysis.svg";
 import InTheOffice from "../../Assets/inTheOffice.svg";
 import MakeItRain from "../../Assets/makeItRain.svg";
 
 const Refer = () => {
   return (
-    <>
+    <div className="bg-light">
       <section className="contact">
-        <div className="container">
+        <div className="container space-2">
           <div className="row justify-content-md-between">
             <div className="col-md-6 mb-7 mb-md-0">
               <h3>Share a link and earn a bonus</h3>
@@ -20,26 +19,26 @@ const Refer = () => {
                 when they complete their registration.
                 <Link to={routes.terms}> Read the terms</Link>
               </p>
-              <div className="form-group">
-                <div className="form-with-icon">
-                  <input
-                    type="text"
-                    className="form-control"
-                    value={"https://google.com"}
-                  />
-                  <div
-                    className="form-icon"
-                    onClick={() => {
-                      navigator.clipboard.writeText("https://google.com");
-                    }}
-                  >
+              <div className="input-group">
+                <input
+                  type="text"
+                  className="form-control"
+                  defaultValue={"https://google.com"}
+                />
+                <div
+                  className="input-group-append"
+                  onClick={() => {
+                    navigator.clipboard.writeText("https://google.com");
+                  }}
+                >
+                  <a href="#" className="input-group-text">
                     <FileEarmarkFill />
-                  </div>
+                  </a>
                 </div>
-                <small className="text-muted">
-                  Copy or share your referral link with friends
-                </small>
               </div>
+              <small className="text-muted">
+                Copy or share your referral link with friends
+              </small>
             </div>
             <div className="col-md-6 col-lg-4">
               <div className="bg-primary shadow-primary-lg rounded pt-4 pb-5 px-5">
@@ -51,7 +50,7 @@ const Refer = () => {
                   <div className="row">
                     <div className="col-6">
                       <div className="mb-3">
-                        <span className="d-block text-white-70 text-white">
+                        <span className="d-block text-white-70 font-size-1">
                           Overall:
                         </span>
                         <span className="align-top text-white">$</span>
@@ -59,8 +58,10 @@ const Refer = () => {
                           1,350
                         </span>
                       </div>
-                      <span className="text-white text-white-70">Monthly:</span>
-                      <span className="text-white font-weight-medium">
+                      <span className="text-white-70 font-size-1">
+                        Monthly:
+                      </span>
+                      <span className="text-white font-weight-medium font-size-1">
                         $425
                       </span>
                     </div>
@@ -108,7 +109,7 @@ const Refer = () => {
           </div>
         </div>
       </section>
-    </>
+    </div>
   );
 };
 
