@@ -1,23 +1,62 @@
-import React from "react";
+import React, { useState } from "react";
+import Form from "../../Components/Form";
 import Menu from "./Menu";
 
-const ChangePassword = () => {
+const ChangePassword = (props) => {
+  const [apiCall, setApiCall] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
+  const [values, setValues] = useState({
+    currentPassword: "",
+    newPassword: "",
+  });
+
+  const handlerChange = (event) => {
+    const { name, value } = event.target;
+    setValues((prevState) => ({
+      ...prevState,
+      [name]: value,
+    }));
+  };
+
+  const submitHandler = async (e) => {
+    e.preventDefault();
+    setApiCall(true);
+    setSubmitted(true);
+    if (values.currentPassword !== "" && values.newPassword !== "") {
+      try {
+        // await props.changePassword(values).then((res) => {
+        //   toast.success(res.message);
+        // });
+      } finally {
+        setApiCall(false);
+      }
+    }
+  };
+
   return (
     <div className="bg-light">
       <Menu />
       <div className="container space-2">
-        <form>
+        <Form name="login-form" submitHandler={submitHandler}>
           <div className="js-form-message mb-6">
             <label className="form-label"> Current password </label>
 
             <div className="form-group">
               <input
                 type="password"
-                className="form-control"
-                name="currentPassword"
                 placeholder="Enter your current password"
                 required
+                name="currentPassword"
+                value={values.currentPassword}
+                onChange={handlerChange}
+                className={
+                  "form-control" +
+                  (submitted && !values.currentPassword ? " is-invalid" : "")
+                }
               />
+              {submitted && !values.fullName && (
+                <div className="invalid-feedback">Please enter password</div>
+              )}
             </div>
           </div>
           <div className="mb-6">
@@ -26,13 +65,20 @@ const ChangePassword = () => {
 
               <div className="form-group">
                 <input
-                  id="newPassword"
                   type="password"
-                  className="form-control"
-                  name="newPassword"
                   placeholder="Enter your password"
                   required
+                  name="newPassword"
+                  value={values.newPassword}
+                  onChange={handlerChange}
+                  className={
+                    "form-control" +
+                    (submitted && !values.newPassword ? " is-invalid" : "")
+                  }
                 />
+                {submitted && !values.fullName && (
+                  <div className="invalid-feedback">Please enter password</div>
+                )}
               </div>
             </div>
           </div>
@@ -42,11 +88,21 @@ const ChangePassword = () => {
             <div className="form-group">
               <input
                 type="password"
-                className="form-control"
-                name="confirmNewPassword"
                 placeholder="Confirm your password"
                 required
+                name="confirmNewPassword"
+                value={values.confirmNewPassword}
+                onChange={handlerChange}
+                className={
+                  "form-control" +
+                  (submitted && !values.confirmNewPassword ? " is-invalid" : "")
+                }
               />
+              {submitted && !values.fullName && (
+                <div className="invalid-feedback">
+                  Please enter conform password
+                </div>
+              )}
             </div>
           </div>
           <div className="w-lg-50">
@@ -63,7 +119,7 @@ const ChangePassword = () => {
               Cancel
             </button>
           </div>
-        </form>
+        </Form>
       </div>
     </div>
   );
