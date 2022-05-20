@@ -15,3 +15,7 @@ export const home = {
 export const extra = {
   contact: { method: "get", url: "/contact" },
 };
+
+export const profile = {
+  adminBankList: { method: "get", url: "/bankAccount" },
+};

@@ -9,7 +9,7 @@ import Balance from "./Balance";
 import Deposits from "./Deposite";
 import Menu from "./Menu";
 
-const ProfileDashboard = () => {
+const ProfileDashboard = (props) => {
   const serviceData =
     services.length > 0 &&
     services.slice(0, 3).map((service) => {
@@ -80,7 +80,7 @@ const ProfileDashboard = () => {
             </div>
           </div>
           <div className="card-deck d-block d-lg-flex card-lg-gutters-3">
-            <Deposits />
+            <Deposits {...props}/>
             <Balance />
             <Activity />
           </div>

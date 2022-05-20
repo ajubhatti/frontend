@@ -16,7 +16,7 @@ const Accordion = ({ title, children }) => {
             }`}
           >
             Do you have any built-in caching?
-            <span class="card-btn-arrow">
+            <span className="card-btn-arrow">
               <ArrowDownShort style={{ fontSize: "28px" }} />
             </span>
           </div>

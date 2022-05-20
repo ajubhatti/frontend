@@ -18119,7 +18119,7 @@ button:focus {
 /* secondary air */
 .btn-soft-secondary {
   color: #77838f;
-  background: rgba(119, 131, 143, 0.1);
+  background: rgba(119, 131, 143, 0.1) !important;
   border-color: transparent;
 }
 
@@ -18132,7 +18132,7 @@ button:focus {
 .btn-soft-secondary[type]:active,
 .btn-soft-secondary[type].active {
   color: #fff;
-  background: #77838f;
+  background: #77838f !important;
   box-shadow: 0 4px 11px rgba(119, 131, 143, 0.35);
 }
 
@@ -18162,7 +18162,7 @@ button:focus {
 /* success air */
 .btn-soft-success {
   color: #00c9a7;
-  background: rgba(0, 201, 167, 0.1);
+  background: rgba(0, 201, 167, 0.1) !important;
   border-color: transparent;
 }
 
@@ -18420,7 +18420,7 @@ button:focus {
 /* white air */
 .btn-soft-white {
   color: #fff;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.1) !important;
   border-color: transparent;
 }
 

@@ -12,6 +12,7 @@ import marketingStrategy from "../../Assets/marketingStrategy.svg";
 import appDevelopment from "../../Assets/appDevelopment.svg";
 import businessAnalysis from "../../Assets/businessAnalysis.svg";
 import Carousel from "../../Components/Carousel";
+import Marquee from "react-fast-marquee";
 
 import Banner1 from "../../Assets/banner1.jpg";
 import Banner2 from "../../Assets/banner2.jpg";
@@ -25,13 +26,13 @@ const Home = (props) => {
   useEffect(() => {
     const getBanners = async () => {
       await props.getBanner().then((res) => {
-        setBannerList(res.filter((x) => x.isActive === true));
+        setBannerList(res);
       });
     };
 
     const getTickers = async () => {
       await props.getTicker().then((res) => {
-        setTickerList(res);
+        setTickerList(res.data);
       });
     };
 
@@ -51,17 +52,15 @@ const Home = (props) => {
         ]}
       />
       <div className="space-2">
-        <marquee>
-          <div className="row">
-            {tickerList.map((theElement) => {
-              return (
-                <span className="d-block text-secondary text-uppercase">
-                  {theElement.description.toString()}
-                </span>
-              );
-            })}
-          </div>
-        </marquee>
+        <Marquee>
+          {tickerList.map((theElement, index) => {
+            return (
+              <span className="d-block text-secondary text-uppercase" key={index}>
+                {theElement.description.toString()}
+              </span>
+            );
+          })}
+        </Marquee>
       </div>
       <div className="container space-2">
         <div className="row align-items-lg-center">
