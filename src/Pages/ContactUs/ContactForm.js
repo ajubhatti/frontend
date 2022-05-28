@@ -9,8 +9,8 @@ const ContactForm = (props) => {
     fullName: "",
     email: "",
     subject: "",
-    phoneNumber: "",
-    reason: "",
+    mobileNo: "",
+    description: "",
   });
 
   const handlerChange = (event) => {
@@ -29,13 +29,13 @@ const ContactForm = (props) => {
       values.fullName !== "" &&
       values.email !== "" &&
       values.subject !== "" &&
-      values.phoneNumber !== "" &&
-      values.reason !== ""
+      values.mobileNo !== "" &&
+      values.description !== ""
     ) {
       try {
-        // await props.sendContactDetails(values).then((res) => {
-        //   toast.success(res.message);
-        // });
+        await props.sendContactDetails(values).then((res) => {
+          toast.success(res.message);
+        });
       } finally {
         setApiCall(false);
       }
@@ -45,9 +45,6 @@ const ContactForm = (props) => {
   return (
     <div className="container space-2 space-md-3">
       <div className="w-md-80 w-lg-50 text-center mx-md-auto mb-9">
-        <span className="btn btn-xs btn-soft-success btn-pill mb-2">
-          Leave a Message
-        </span>
         <h2 className="text-primary font-weight-normal">
           Tell us about <span className="font-weight-semi-bold">yourself</span>
         </h2>
@@ -140,18 +137,18 @@ const ContactForm = (props) => {
                 </label>
                 <input
                   type="tel"
-                  name="phoneNumber"
+                  name="mobileNo"
                   placeholder="123-45-678"
                   pattern="[7-9]{1}[0-9]{9}"
                   required
-                  value={values.phoneNumber}
+                  value={values.mobileNo}
                   onChange={handlerChange}
                   className={
                     "form-control" +
-                    (submitted && !values.phoneNumber ? " is-invalid" : "")
+                    (submitted && !values.mobileNo ? " is-invalid" : "")
                   }
                 />
-                {submitted && !values.phoneNumber && (
+                {submitted && !values.mobileNo && (
                   <div className="invalid-feedback">
                     Phone Number is required
                   </div>
@@ -169,17 +166,17 @@ const ContactForm = (props) => {
             <div className="input-group">
               <textarea
                 rows="4"
-                name="reason"
+                name="description"
                 placeholder="Hi there, I would like to ..."
                 required
-                value={values.reason}
+                value={values.description}
                 onChange={handlerChange}
                 className={
                   "form-control" +
-                  (submitted && !values.reason ? " is-invalid" : "")
+                  (submitted && !values.description ? " is-invalid" : "")
                 }
               ></textarea>
-              {submitted && !values.reason && (
+              {submitted && !values.description && (
                 <div className="invalid-feedback">Email is required</div>
               )}
             </div>

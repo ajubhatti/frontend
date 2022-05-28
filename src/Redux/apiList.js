@@ -13,7 +13,7 @@ export const home = {
 };
 
 export const extra = {
-  contact: { method: "get", url: "/contact" },
+  contact: { method: "post", url: "/contactUs" },
 };
 
 export const profile = {
