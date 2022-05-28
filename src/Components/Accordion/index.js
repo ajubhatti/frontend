@@ -15,7 +15,7 @@ const Accordion = ({ title, children }) => {
               isOpen ? "" : "collapsed"
             }`}
           >
-            Do you have any built-in caching?
+            {title}
             <span className="card-btn-arrow">
               <ArrowDownShort style={{ fontSize: "28px" }} />
             </span>
