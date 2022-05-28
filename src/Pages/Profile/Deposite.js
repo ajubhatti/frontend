@@ -44,37 +44,6 @@ const Deposits = (props) => {
             Add Funds
           </button>
         </div>
-        <div className="card-footer p-5">
-          <div className="row align-items-center">
-            <div className="col-6 u-ver-divider">
-              <label className="small text-muted">Goal:</label>
-              <small className="font-weight-medium">$100k</small>
-              <div
-                className="js-hr-progress progress"
-                style={{ height: "4px" }}
-              >
-                <div
-                  className="js-hr-progress-bar progress-bar"
-                  style={{ width: "75%" }}
-                ></div>
-              </div>
-            </div>
-
-            <div className="col-6">
-              <label className="small text-muted">Duration:</label>
-              <small className="font-weight-medium">6 months</small>
-              <div
-                className="js-hr-progress progress"
-                style={{ height: "4px" }}
-              >
-                <div
-                  className="js-hr-progress-bar progress-bar bg-success"
-                  style={{ width: "40%" }}
-                ></div>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </>
   );

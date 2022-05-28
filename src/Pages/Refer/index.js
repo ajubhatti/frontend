@@ -1,12 +1,104 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { FileEarmarkFill } from "react-bootstrap-icons";
 import { Link } from "react-router-dom";
 import routes from "../../Helper/routes";
 import Analysis from "../../Assets/analysis.svg";
 import InTheOffice from "../../Assets/inTheOffice.svg";
 import MakeItRain from "../../Assets/makeItRain.svg";
+import { getUser } from "../../Helper/LocalStorage";
+import { toast } from "react-toastify";
 
-const Refer = () => {
+import {
+  FacebookShareButton,
+  LinkedinShareButton,
+  TwitterShareButton,
+  WhatsappShareButton,
+} from "react-share";
+
+import FacebookIcon from "../../Assets/facebook_icon.png";
+import LinkedInIcon from "../../Assets/linkedin_icon.png";
+import TwitterIcon from "../../Assets/twitter_icon.png";
+import WhatsAppIcon from "../../Assets/whatsapp_icon.png";
+
+const sharedMsg =
+  "Sign up for an account and we both get 10$ free credits. Use this referral code\n";
+
+const Refer = (props) => {
+  const [code, setCode] = useState([]);
+
+  useEffect(() => {
+    const userDetails = getUser();
+    const getReferCode = async () => {
+      await props.generateReferCode({ userId: userDetails.id }).then((res) => {
+        setCode(res.data.referralCode);
+      });
+    };
+
+    getReferCode();
+  }, [props]);
+
+  const shareInviteVia = (pathUrl) => [
+    <TwitterShareButton
+      windowWidth={800}
+      windowHeight={800}
+      url={pathUrl}
+      title={sharedMsg}
+      key={"Twitter"}
+      className="btn btn-sm btn-icon btn-soft-secondary rounded-circle"
+    >
+      <img
+        alt="Twitter"
+        className="img-fluid rounded-circle"
+        src={TwitterIcon}
+      />
+    </TwitterShareButton>,
+    <LinkedinShareButton
+      windowWidth={800}
+      windowHeight={800}
+      url={pathUrl}
+      title={sharedMsg}
+      summary={sharedMsg}
+      key={"LinkedIn"}
+      className="btn btn-sm btn-icon btn-soft-secondary rounded-circle"
+    >
+      <img
+        alt="LinkedIn"
+        className="img-fluid rounded-circle"
+        src={LinkedInIcon}
+      />
+    </LinkedinShareButton>,
+    <WhatsappShareButton
+      windowWidth={800}
+      windowHeight={800}
+      url={pathUrl}
+      title={sharedMsg}
+      separator=""
+      key={"WhatsApp"}
+      className="btn btn-sm btn-icon btn-soft-secondary rounded-circle"
+    >
+      <img
+        alt="WhatsApp"
+        className="img-fluid rounded-circle"
+        src={WhatsAppIcon}
+      />
+    </WhatsappShareButton>,
+    <FacebookShareButton
+      windowWidth={800}
+      windowHeight={800}
+      url={pathUrl}
+      quote={sharedMsg}
+      description={sharedMsg}
+      key={"Facebook"}
+      className="btn btn-sm btn-icon btn-soft-secondary rounded-circle"
+    >
+      <img
+        alt="Facebook"
+        className="img-fluid rounded-circle"
+        src={FacebookIcon}
+      />
+    </FacebookShareButton>,
+  ];
+
   return (
     <div className="bg-light">
       <section className="contact">
@@ -23,22 +115,32 @@ const Refer = () => {
                 <input
                   type="text"
                   className="form-control"
-                  defaultValue={"https://google.com"}
+                  defaultValue={code}
                 />
                 <div
-                  className="input-group-append"
+                  className="input-group-append pointer"
                   onClick={() => {
-                    navigator.clipboard.writeText("https://google.com");
+                    navigator.clipboard.writeText(code);
+                    toast.success("Link copied to clipboard.");
                   }}
                 >
-                  <a href="#" className="input-group-text">
+                  <div className="input-group-text">
                     <FileEarmarkFill />
-                  </a>
+                  </div>
                 </div>
               </div>
               <small className="text-muted">
                 Copy or share your referral link with friends
               </small>
+              <ul className="list-inline mt-3">
+                {shareInviteVia(code).map((platform, index) => {
+                  return (
+                    <li className="list-inline-item" key={index}>
+                      {platform}
+                    </li>
+                  );
+                })}
+              </ul>
             </div>
             <div className="col-md-6 col-lg-4">
               <div className="bg-primary shadow-primary-lg rounded pt-4 pb-5 px-5">

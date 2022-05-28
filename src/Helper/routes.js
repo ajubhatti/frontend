@@ -13,6 +13,7 @@ const routes = {
   contactUs: "/contact-us",
   aboutUs: "/about-us",
   refer: "/refer",
+  support: "/support",
   profileDashboard: "/dashboard",
   profileTransaction: "/transaction",
   profileChangePassword: "/change-password",

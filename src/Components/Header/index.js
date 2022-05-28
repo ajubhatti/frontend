@@ -8,7 +8,7 @@ const Header = () => {
   const Links = [
     { title: "Home", link: routes.home },
     { title: "Service", link: routes.home },
-    { title: "Support", link: routes.home },
+    { title: "Support", link: routes.support },
     { title: "About Us", link: routes.aboutUs },
     { title: "Contact US", link: routes.contactUs },
     { title: "Referral", link: routes.refer },

@@ -11,7 +11,7 @@ const Accordion = ({ title, children }) => {
       >
         <h6 className="mb-0 pointer">
           <div
-            class={`btn btn-block d-flex justify-content-between card-btn pointer ${
+            className={`btn btn-block d-flex justify-content-between card-btn pointer ${
               isOpen ? "" : "collapsed"
             }`}
           >

@@ -14,6 +14,8 @@ export const home = {
 
 export const extra = {
   contact: { method: "post", url: "/contactUs" },
+  refer: { method: "post", url: "/referral/code" },
+  support: { method: "get", url: "/support" },
 };
 
 export const profile = {

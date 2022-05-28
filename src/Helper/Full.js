@@ -13,6 +13,7 @@ import RegisterContainer from "../Containers/Register";
 import ResetPasswordContainer from "../Containers/ResetPassword";
 import verifyEmailContainer from "../Containers/verifyEmail";
 import ReferContainer from "../Containers/Refer";
+import SupportContainer from '../Containers/Support';
 import AboutUs from "../Pages/AboutUs";
 import ContactContainer from "../Containers/ContactUs";
 import PageNotFound from "../Pages/PageNotFound";
@@ -136,6 +137,12 @@ const Full = (props) => {
           path={routes.refer}
           name="refer"
           component={ReferContainer}
+        />
+        <Route
+          exact
+          path={routes.support}
+          name="support"
+          component={SupportContainer}
         />
         {/* <Redirect from="/" to={routes.home} /> */}
         <Route path="*" exact component={PageNotFound} />

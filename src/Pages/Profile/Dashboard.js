@@ -1,20 +1,11 @@
 import React from "react";
 import { Coin, CurrencyDollar, CurrencyExchange } from "react-bootstrap-icons";
-import { Link } from "react-router-dom";
-import ServiceCard from "../../Components/ServiceCard";
-import routes from "../../Helper/routes";
-import { services } from "../../Shared/constant";
 import Activity from "./Activity";
 import Balance from "./Balance";
 import Deposits from "./Deposite";
 import Menu from "./Menu";
 
 const ProfileDashboard = (props) => {
-  const serviceData =
-    services.length > 0 &&
-    services.slice(0, 3).map((service) => {
-      return <ServiceCard key={service.id} {...service} />;
-    });
 
   return (
     <>
@@ -66,17 +57,6 @@ const ProfileDashboard = (props) => {
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
-          <div className="d-flex justify-content-between align-items-center mb-3">
-            <h6>Your earning</h6>
-            <Link to={routes.home} className="link-muted">
-              View All
-            </Link>
-          </div>
-          <div className="mb-5">
-            <div className="card-deck d-block d-lg-flex card-lg-gutters-3">
-              {serviceData?.length > 0 && serviceData}
             </div>
           </div>
           <div className="card-deck d-block d-lg-flex card-lg-gutters-3">

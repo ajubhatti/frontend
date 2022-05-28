@@ -7,9 +7,10 @@ const AboutUs = () => {
         <div className="mb-11">
           <h1 className="display-4 font-weight-semi-bold">About Us</h1>
           <p className="lead font-weight-normal">
-            We're on a mission to simplify cloud computing so developers and
-            their teams can spend more time building software that changes the
-            world.
+            Provide the most trusted, secure and affordable electronic payments
+            solutions in the markets we serve, maintaining the leading edge in
+            technology by establishing strong partnerships and a generous
+            commitment to our customers and our people.
           </p>
         </div>
       </div>
@@ -22,60 +23,33 @@ const AboutUs = () => {
         <div className="row justify-content-lg-between">
           <div className="col-lg-4 mb-5 mb-lg-0">
             <h2 className="font-weight-semi-bold">
-              Tools should adapt to the user, not the other way around.
+              We don’t need customers. We need people that care about each
+              other.
             </h2>
           </div>
           <div className="col-lg-6">
             <p>
-              Since 2007, we have helped 25 companies launch over 1k incredible
-              products. We believe the best digital solutions are built at the
-              intersection of business strategy, available technology, and real
-              user's needs.
+              Badipay is India’s No.1 payments app. Customers across the country
+              use Badipay to make prepaid, postpaid, DTH, metro recharge and
+              utility bill payments for numerous service providers. We launched
+              our wallet in July 2022 and customers are already using it to pay
+              across all major online platforms.
             </p>
             <p>
-              Things can get really complex, really quickly, and a pragmatic,
-              synthetic and clear vision is essential to be able to create
-              something that, after all, is meant to be used. Emotions also have
-              a big role to play and developing clear and beautiful aesthetics
-              is of the utmost importance to create a pleasant environment in
-              which the user actually enjoys the time spent in it. In the end,
-              we're all suckers for beautiful things that just work
+              Badipay focus on Delivering Reliable Value Added Services to
+              Customers in an easiest possible manner which will simplify their
+              utility transactions and requirements. Bringing various common
+              services like Mobile Top-Up/DTH Recharge etc under one roof will
+              significantly reduce the inventory of agents/dealers/retail
+              outlets and also boost their business growth in several ways.
             </p>
-          </div>
-        </div>
-      </div>
-      <div className="container">
-        <div className="w-lg-65 mx-lg-auto">
-          <hr className="my-0" />
-        </div>
-      </div>
-      <div className="container space-top-1">
-        <div className="row justify-content-lg-center">
-          <div className="col-sm-4 col-lg-3 mb-7 mb-sm-0">
-            <div className="text-center">
-              <span className="d-block h2 font-weight-semi-bold text-uppercase mb-0">
-                17
-              </span>
-              <span className="text-secondary">years in business</span>
-            </div>
-          </div>
-
-          <div className="col-sm-4 col-lg-3 mb-7 mb-sm-0">
-            <div className="text-center">
-              <span className="d-block h2 font-weight-semi-bold text-uppercase mb-0">
-                1k+
-              </span>
-              <span className="text-secondary">products launched</span>
-            </div>
-          </div>
-
-          <div className="col-sm-4 col-lg-3">
-            <div className="text-center">
-              <span className="d-block h2 font-weight-semi-bold text-uppercase mb-0">
-                53%
-              </span>
-              <span className="text-secondary">remote employees</span>
-            </div>
+            <p>
+              Badipay provide easy recharging facility for all prepaid mobile
+              networks available in India with the help of our Instant recharge
+              solutions. Our Single Sim Recharge facility works on any Normal
+              Mobile Handset and provides an easy way to earn additional revenue
+              for shopkeepers and retailers.
+            </p>
           </div>
         </div>
       </div>
