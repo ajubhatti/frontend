@@ -22,6 +22,7 @@ const Confirmation = (props) => {
           type="submit"
           className="btn btn-primary transition-3d-hover mr-1"
           onClick={saveAndContinue}
+          disabled={props.loading}
         >
           Request Payment
         </button>

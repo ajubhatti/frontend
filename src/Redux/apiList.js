@@ -20,4 +20,5 @@ export const extra = {
 
 export const profile = {
   adminBankList: { method: "get", url: "/bankAccount" },
+  walletRequest: { method: "post", url: "/walletTransaction" },
 };

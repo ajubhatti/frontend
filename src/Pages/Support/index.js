@@ -16,8 +16,6 @@ const Support = (props) => {
     getSupportListing();
   }, [props]);
 
-  console.log("listingData", listingData);
-
   return (
     <>
       <div className="bg-light">

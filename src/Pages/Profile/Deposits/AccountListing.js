@@ -19,7 +19,7 @@ const AccountListing = (props) => {
               <div
                 className="card card-frame mb-2 pointer"
                 key={index}
-                onClick={() => addBankDetail(bank.accountNo)}
+                onClick={() => addBankDetail(bank.bankId)}
               >
                 <div className="card-body align-items-sm-center p-2">
                   <div className="media align-items-center">

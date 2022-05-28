@@ -3,6 +3,8 @@ import { Bank, CheckCircle, Wallet } from "react-bootstrap-icons";
 import AccountListing from "./AccountListing";
 import Confirmation from "./Confirmation";
 import PaymentDetail from "./PaymentDetail";
+import { getUser } from "../../../Helper/LocalStorage";
+import { toast } from "react-toastify";
 
 const MultiStepForm = (props) => {
   const [step, setStep] = useState(1);
@@ -11,12 +13,19 @@ const MultiStepForm = (props) => {
     requestAmount: 0,
     slipNo: "",
     remark: "",
-    creditAccount: "",
+    creditAccount: 0,
     paymentType: 1,
   });
   const [adminBankList, setAdminBankList] = useState([]);
+  const [apiCall, setApiCall] = useState(false);
 
   useEffect(() => {
+    const getUserData = getUser();
+    setValues((prevState) => ({
+      ...prevState,
+      userId: getUserData.id,
+    }));
+
     const getAdminBankingList = async () => {
       await props.getAdminBankList().then((res) => {
         setAdminBankList(res);
@@ -49,7 +58,17 @@ const MultiStepForm = (props) => {
     }));
   };
 
-  console.log('values', values)
+  const submitHandler = async () => {
+    setApiCall(true);
+    try {
+      await props.addMoneyInWallet(values).then((res) => {
+        props.onHide();
+        toast.success(res.message);
+      });
+    } finally {
+      setApiCall(false);
+    }
+  };
 
   const stepRanders = () => {
     switch (step) {
@@ -74,9 +93,10 @@ const MultiStepForm = (props) => {
       default:
         return (
           <Confirmation
-            nextStep={nextStep}
+            nextStep={submitHandler}
             prevStep={prevStep}
             inputValues={values}
+            loading={apiCall}
           />
         );
     }
