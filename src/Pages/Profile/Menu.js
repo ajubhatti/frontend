@@ -9,6 +9,7 @@ const Menu = () => {
 
   const logout = async () => {
     LocalStorage.clean();
+    window.location.reload();
   };
 
   return (

@@ -12,6 +12,7 @@ export const login = (data) => () =>
       .then((res) => {
         const resData = res.data ? Crypto.encrypt(res.data) : null;
         LocalStorage.set(localStorageKey.user, resData);
+        window.location.reload();
         resolve(res);
       })
       .catch((err) => reject(err));
@@ -21,10 +22,6 @@ export const register = (data) => () =>
   new Promise((resolve, reject) => {
     fetchUrl(auth.register.method, auth.register.url, data, configData)
       .then((res) => {
-        // const resData = res.data.account
-        //   ? Crypto.encrypt(res.data.account)
-        //   : null;
-        // LocalStorage.set(localStorageKey.user, resData);
         resolve(res);
       })
       .catch((err) => reject(err));

@@ -44,9 +44,9 @@ const RegisterForm = (props) => {
     e.preventDefault();
     setSubmitted(true);
     if (
-      values.userName !== "" ||
-      values.phoneNumber !== "" ||
-      values.email !== "" ||
+      values.userName !== "" &&
+      values.phoneNumber !== "" &&
+      values.email !== "" &&
       values.password !== ""
     ) {
       if (checked) {
@@ -65,7 +65,7 @@ const RegisterForm = (props) => {
           setApiCall(false);
         }
       } else {
-        toast.success("please accept terms and conditions");
+        toast.error("please accept terms and conditions");
       }
     }
   };
@@ -76,6 +76,25 @@ const RegisterForm = (props) => {
       submitHandler={submitHandler}
       className="sl-form"
     >
+      <div className="form-group">
+        <label className="form-label">
+          Referral Code <small className="text-muted">(optional)</small>
+        </label>
+        <input
+          type="text"
+          placeholder="XXXXXX"
+          name="referrelId"
+          value={values.referrelId}
+          onChange={referCodeChangeHandler}
+          className="form-control"
+        />
+        <small
+          className="valid-feedback"
+          style={{ display: refererName.length > 0 ? "block" : "none" }}
+        >
+          {refererName}
+        </small>
+      </div>
       <div className="form-group">
         <label className="form-label">Full Name</label>
         <input
@@ -112,25 +131,6 @@ const RegisterForm = (props) => {
         {submitted && !values.phoneNumber && (
           <div className="invalid-feedback">Phone Number is required</div>
         )}
-      </div>
-      <div className="form-group">
-        <label className="form-label">
-          Referral Code <small className="text-muted">(optional)</small>
-        </label>
-        <input
-          type="text"
-          placeholder="XXXXXX"
-          name="referrelId"
-          value={values.referrelId}
-          onChange={referCodeChangeHandler}
-          className="form-control"
-        />
-        <small
-          className="valid-feedback"
-          style={{ display: refererName.length > 0 ? "block" : "none" }}
-        >
-          {refererName}
-        </small>
       </div>
       <div className="form-group">
         <label className="form-label">Email</label>
