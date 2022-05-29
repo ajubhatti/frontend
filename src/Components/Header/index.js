@@ -2,9 +2,12 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import routes from "../../Helper/routes";
 import Logo from "../../Assets/logo.jpg";
+import { getToken } from "../../Helper/LocalStorage";
 
 const Header = () => {
   const [open, setOpen] = useState(false);
+  const isUser = getToken();
+
   const Links = [
     { title: "Home", link: routes.home },
     { title: "Service", link: routes.home },
@@ -12,7 +15,7 @@ const Header = () => {
     { title: "About Us", link: routes.aboutUs },
     { title: "Contact US", link: routes.contactUs },
     { title: "Referral", link: routes.refer },
-    { title: "My Profile", link: routes.profileDashboard },
+    { title: isUser ? "My Profile" : "Login", link: routes.profileDashboard },
   ];
   return (
     <header className="u-header">

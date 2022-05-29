@@ -41,7 +41,8 @@ const ContactUs = (props) => {
             </p>
           </div>
         </div>
-
+        <ContactForm {...props} />
+        <hr className="my-0" />
         <div className="clearfix space-2">
           <div className="row no-gutters">
             {cards.length > 0 &&
@@ -50,10 +51,8 @@ const ContactUs = (props) => {
               })}
           </div>
         </div>
-        <hr className="my-0" />
-        <ContactForm {...props} />
       </div>
-      <hr className="my-0"/>
+      <hr className="my-0" />
     </>
   );
 };

@@ -36,7 +36,7 @@ const PaymentDetail = (props) => {
           </div>
         </div>
         <div className="col-sm-6 mb-4">
-          <label className="form-label">Slip No</label>
+          <label className="form-label">Transaction No</label>
           <div className="js-form-message u-has-success">
             <div className="input-group input-group-sm">
               <input
@@ -71,6 +71,7 @@ const PaymentDetail = (props) => {
             <option value="4">UPI (Unified Payments Interface)</option>
             <option value="5">Cheque</option>
             <option value="6">Cash</option>
+            <option value="7">Credit</option>
           </select>
         </div>
       </div>
