@@ -5,6 +5,8 @@ export const auth = {
   forgotPass: { method: "post", url: "/auth/forgot-password" },
   resetPass: { method: "post", url: "/auth/reset-password" },
   verifyEmail: { method: "post", url: "/auth/verify-email" },
+  verifyPhone: {method: "post", url: "/auth/verify-phone-no"},
+  referer: { method: "post", url: "/auth/getByReferralCode" },
 };
 
 export const home = {

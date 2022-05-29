@@ -82,7 +82,7 @@ const Menu = () => {
                     </li>
                     <li className="nav-item u-header__nav-item">
                       <span
-                        className="nav-link u-header__nav-link u-header__nav-link-toggle"
+                        className="nav-link u-header__nav-link u-header__nav-link-toggle pointer"
                         onClick={logout}
                       >
                         Logout

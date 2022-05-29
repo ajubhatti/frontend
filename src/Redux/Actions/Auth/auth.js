@@ -21,10 +21,10 @@ export const register = (data) => () =>
   new Promise((resolve, reject) => {
     fetchUrl(auth.register.method, auth.register.url, data, configData)
       .then((res) => {
-        const resData = res.data.account
-          ? Crypto.encrypt(res.data.account)
-          : null;
-        LocalStorage.set(localStorageKey.user, resData);
+        // const resData = res.data.account
+        //   ? Crypto.encrypt(res.data.account)
+        //   : null;
+        // LocalStorage.set(localStorageKey.user, resData);
         resolve(res);
       })
       .catch((err) => reject(err));
@@ -60,6 +60,15 @@ export const resetPassword = (data) => () =>
 export const verify = (data) => () =>
   new Promise((resolve, reject) => {
     fetchUrl(auth.verifyEmail.method, auth.verifyEmail.url, data, configData)
+      .then((res) => {
+        resolve(res);
+      })
+      .catch((err) => reject(err));
+  });
+
+export const getRefererUser = (data) => () =>
+  new Promise((resolve, reject) => {
+    fetchUrl(auth.referer.method, auth.referer.url, data, configData)
       .then((res) => {
         resolve(res);
       })

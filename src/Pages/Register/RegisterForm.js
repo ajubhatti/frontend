@@ -2,10 +2,13 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Form from "../../Components/Form";
 import routes from "../../Helper/routes";
+import { toast } from "react-toastify";
 
 const RegisterForm = (props) => {
   const [apiCall, setApiCall] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [refererName, setRefererName] = useState("");
+  const [checked, setChecked] = useState(false);
   const [values, setValues] = useState({
     userName: "",
     phoneNumber: "",
@@ -22,6 +25,21 @@ const RegisterForm = (props) => {
     }));
   };
 
+  const referCodeChangeHandler = (event) => {
+    const { name, value } = event.target;
+    if (value.length > 8) {
+      props.getRefererUser({ code: value }).then((res) => {
+        setRefererName(res.data.userName);
+      });
+    } else {
+      setRefererName("");
+    }
+    setValues((prevState) => ({
+      ...prevState,
+      [name]: value,
+    }));
+  };
+
   const submitHandler = async (e) => {
     e.preventDefault();
     setSubmitted(true);
@@ -31,13 +49,23 @@ const RegisterForm = (props) => {
       values.email !== "" ||
       values.password !== ""
     ) {
-      setApiCall(true);
-      try {
-        await props.register(values).then(() => {
-          props.history.push(routes.home);
-        });
-      } finally {
-        setApiCall(false);
+      if (checked) {
+        setApiCall(true);
+        try {
+          await props.register(values).then((res) => {
+            toast.success(res.message);
+            props.history.push({
+              pathname: routes.otp,
+              state: {
+                mobileNo: values.phoneNumber,
+              },
+            });
+          });
+        } finally {
+          setApiCall(false);
+        }
+      } else {
+        toast.success("please accept terms and conditions");
       }
     }
   };
@@ -92,11 +120,17 @@ const RegisterForm = (props) => {
         <input
           type="text"
           placeholder="XXXXXX"
-          name="userName"
+          name="referrelId"
           value={values.referrelId}
-          onChange={handlerChange}
+          onChange={referCodeChangeHandler}
           className="form-control"
         />
+        <small
+          className="valid-feedback"
+          style={{ display: refererName.length > 0 ? "block" : "none" }}
+        >
+          {refererName}
+        </small>
       </div>
       <div className="form-group">
         <label className="form-label">Email</label>
@@ -139,10 +173,11 @@ const RegisterForm = (props) => {
           <input
             type="checkbox"
             className="custom-control-input"
-            name="termsCheckbox"
-            required
+            id="termsCheckbox"
+            value=""
+            onClick={(e) => setChecked(e.target.checked)}
           />
-          <label className="custom-control-label" for="termsCheckbox">
+          <label className="custom-control-label" htmlFor="termsCheckbox">
             <small>
               I agree to the {""}
               <Link to={routes.terms} className="link-muted">

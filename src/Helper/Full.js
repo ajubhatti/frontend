@@ -16,6 +16,7 @@ import ReferContainer from "../Containers/Refer";
 import SupportContainer from '../Containers/Support';
 import AboutUs from "../Pages/AboutUs";
 import ContactContainer from "../Containers/ContactUs";
+import OtpContainer from '../Containers/Otp';
 import PageNotFound from "../Pages/PageNotFound";
 import PrivacyPolicy from "../Pages/PrivacyPolicy";
 import TermsCondition from "../Pages/TermsCondition";
@@ -144,6 +145,7 @@ const Full = (props) => {
           name="support"
           component={SupportContainer}
         />
+        <Route exact path={routes.otp} name="otp" component={OtpContainer} />
         {/* <Redirect from="/" to={routes.home} /> */}
         <Route path="*" exact component={PageNotFound} />
       </Switch>
