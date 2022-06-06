@@ -9,7 +9,7 @@ const ProfileDashboard = (props) => {
 
   return (
     <>
-      <Menu />
+      <Menu {...props}/>
       <section className="dashboard-section bg-light">
         <div className="container space-2">
           <div className="card-deck d-block d-lg-flex card-lg-gutters-3 mb-5">

@@ -9,14 +9,16 @@ import ProfileContainer from "../Containers/Profile";
 import ProfileDashboardContainer from "../Containers/Profile/dashboard";
 import ProfileTransactionContainer from "../Containers/Profile/Transaction";
 import ChangePasswordContainer from "../Containers/Profile/ChangePassword";
+import ChangePinContainer from '../Containers/Profile/ChangePin'
 import RegisterContainer from "../Containers/Register";
 import ResetPasswordContainer from "../Containers/ResetPassword";
 import verifyEmailContainer from "../Containers/verifyEmail";
 import ReferContainer from "../Containers/Refer";
-import SupportContainer from '../Containers/Support';
-import AboutUs from "../Pages/AboutUs";
+import SupportContainer from "../Containers/Support";
+import WalletContainer from "../Containers/Wallet";
 import ContactContainer from "../Containers/ContactUs";
-import OtpContainer from '../Containers/Otp';
+import OtpContainer from "../Containers/Otp";
+import AboutUs from "../Pages/AboutUs";
 import PageNotFound from "../Pages/PageNotFound";
 import PrivacyPolicy from "../Pages/PrivacyPolicy";
 import TermsCondition from "../Pages/TermsCondition";
@@ -102,6 +104,12 @@ const Full = (props) => {
           path={routes.profileChangePassword}
           component={ChangePasswordContainer}
         />
+        <PrivateRoute
+          exact
+          name="change-pin"
+          path={routes.profileChangePin}
+          component={ChangePinContainer}
+        />
         <Route
           exact
           path={routes.terms}
@@ -144,6 +152,12 @@ const Full = (props) => {
           path={routes.support}
           name="support"
           component={SupportContainer}
+        />
+        <Route
+          exact
+          path={routes.wallet}
+          name="wallet"
+          component={WalletContainer}
         />
         <Route exact path={routes.otp} name="otp" component={OtpContainer} />
         {/* <Redirect from="/" to={routes.home} /> */}

@@ -17,7 +17,9 @@ const routes = {
   profileDashboard: "/dashboard",
   profileTransaction: "/transaction",
   profileChangePassword: "/change-password",
-  otp: "/otp"
+  profileChangePin: "/change-pin",
+  otp: "/otp",
+  wallet: "/wallet",
 };
 
 export default routes;

@@ -7,20 +7,20 @@ import routes from "../../Helper/routes";
 const ForgotForm = (props) => {
   const [apiCall, setApiCall] = useState(false);
   const [submitted, setSubmitted] = useState(false);
-  const [email, setEmail] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState("");
 
   const handlerChange = (event) => {
     const { value } = event.target;
-    setEmail(value);
+    setPhoneNumber(value);
   };
 
   const submitHandler = async (e) => {
     e.preventDefault();
     setSubmitted(true);
-    if (email !== "") {
+    if (phoneNumber !== "") {
       setApiCall(true);
       try {
-        await props.forgotPassword({ email: email }).then((res) => {
+        await props.forgotPassword({ phoneNumber: phoneNumber }).then((res) => {
           toast.success(res.message);
         });
       } finally {
@@ -35,20 +35,22 @@ const ForgotForm = (props) => {
       className="sl-form"
     >
       <div className="form-group">
-        <label className="form-label">Email</label>
+        <label className="form-label">Phone Number</label>
         <input
-          type="email"
-          placeholder="example@gmail.com"
-          required=""
-          name="email"
-          value={email}
+          type="tel"
+          name="phoneNumber"
+          placeholder="123-45-678"
+          pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
+          required
+          value={phoneNumber}
           onChange={handlerChange}
           className={
-            "form-control" + (submitted && !email ? " is-invalid" : "")
+            "form-control" +
+            (submitted && !phoneNumber ? " is-invalid" : "")
           }
         />
-        {submitted && !email && (
-          <div className="invalid-feedback">Email is required</div>
+        {submitted && !phoneNumber && (
+          <div className="invalid-feedback">Phone Number is required</div>
         )}
       </div>
       <div className="row align-items-center mb-5">

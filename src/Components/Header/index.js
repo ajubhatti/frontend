@@ -15,6 +15,7 @@ const Header = () => {
     { title: "About Us", link: routes.aboutUs },
     { title: "Contact US", link: routes.contactUs },
     { title: "Referral", link: routes.refer },
+    { title: "Wallet", link: routes.wallet },
     { title: isUser ? "My Profile" : "Login", link: routes.profileDashboard },
   ];
   return (

@@ -1938,6 +1938,25 @@ pre code {
   background-color: rgba(255, 255, 255, 0.075);
 }
 
+.paginationOpts__root .form-label {
+    display: none;
+}
+
+.paginationOpts__root>select {
+    color: #377dff;
+    position: relative;
+    display: inline-block;
+    z-index: 1;
+    text-align: left;
+    white-space: nowrap;
+    background: rgba(55, 125, 255, 0.1);
+    border-color: transparent;
+    padding: 0.625rem 1.125rem;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    border-radius: 0.25rem;
+}
+
 @media (max-width: 575.98px) {
   .table-responsive-sm {
     display: block;

@@ -7,7 +7,7 @@ const LoginForm = (props) => {
   const [apiCall, setApiCall] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [values, setValues] = useState({
-    email: "",
+    mobileNo: "",
     password: "",
   });
 
@@ -23,10 +23,19 @@ const LoginForm = (props) => {
     e.preventDefault();
     setApiCall(true);
     setSubmitted(true);
-    if (values.email !== "" && values.password !== "") {
+    if (values.mobileNo !== "" && values.password !== "") {
       try {
-        await props.login(values).then(() => {
-          props.history.push(routes.home);
+        await props.login(values).then((res) => {
+          if (res.data) {
+            props.history.push(routes.home);
+          } else {
+            props.history.push({
+              pathname: routes.otp,
+              state: {
+                mobileNo: values.mobileNo,
+              },
+            });
+          }
         });
       } finally {
         setApiCall(false);
@@ -37,20 +46,22 @@ const LoginForm = (props) => {
   return (
     <Form name="login-form" submitHandler={submitHandler}>
       <div className="form-group">
-        <label className="form-label">Email</label>
+        <label className="form-label">Phone Number</label>
         <input
-          type="email"
-          placeholder="example@gmail.com"
-          required=""
-          name="email"
-          value={values.email}
+          type="tel"
+          name="mobileNo"
+          placeholder="123-45-678"
+          pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
+          required
+          value={values.mobileNo}
           onChange={handlerChange}
           className={
-            "form-control" + (submitted && !values.email ? " is-invalid" : "")
+            "form-control" +
+            (submitted && !values.mobileNo ? " is-invalid" : "")
           }
         />
-        {submitted && !values.email && (
-          <div className="invalid-feedback">Email is required</div>
+        {submitted && !values.mobileNo && (
+          <div className="invalid-feedback">Phone Number is required</div>
         )}
       </div>
       <div className="form-group">

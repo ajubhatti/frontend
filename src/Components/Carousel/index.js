@@ -1,48 +1,57 @@
-import React, { useEffect, useState } from "react";
+import React, { useState, useEffect } from "react";
+import { ArrowLeftCircle, ArrowRightCircle } from "react-bootstrap-icons";
+import Slide from "./Slide";
+import "./style.css";
 
 const Carousel = (props) => {
-  const [active, setActive] = useState(0);
-  let scrollInterval = null;
-  const style = {
-    carouselItem: {
-      position: "absolute",
-      visibility: "hidden",
-      height: "550px",
-      width: "100%",
-      objectFit: "cover",
-    },
-    visible: {
-      visibility: "visible",
-    },
-  };
-  useEffect(() => {
-    scrollInterval = setTimeout(() => {
-      const { carouselItems } = props;
-      setActive((active + 1) % carouselItems.length);
-    }, 5000);
-  });
+  const [activeSlide, setActiveSlide] = useState(0);
+  const [autoplay, setAutoplay] = useState(true);
 
-  const { carouselItems, ...rest } = props;
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      if (autoplay) {
+        nextSlide();
+      }
+    }, 1000);
+    return () => clearInterval(intervalId);
+  }, [autoplay]);
+
+  const pause = () => {
+    setAutoplay(false);
+  };
+
+  const resume = () => {
+    setAutoplay(true);
+  };
+
+  const prevSlide = () => {
+    let slide =
+      activeSlide - 1 < 0 ? props.slides?.length - 1 : activeSlide - 1;
+    setActiveSlide(slide);
+  };
+
+  const nextSlide = () => {
+    let slide = activeSlide + 1 < props.slides?.length ? activeSlide + 1 : 0;
+    setActiveSlide(slide);
+  };
 
   return (
-    <div className="u-hero-v1" style={{ height: "550px" }}>
-      <div className="js-slick-carousel u-slick slick-initialized slick-slider">
-        <div className="slick-track">
-          {carouselItems.map((item, index) => {
-            const activeStyle = active === index ? style.visible : {};
-            const className = `js-slide slick-slide slick-current ${
-              active === index ? "slick-active" : ""
-            }`;
-            return React.cloneElement(item, {
-              ...rest,
-              style: {
-                ...style.carouselItem,
-                ...activeStyle,
-              },
-              className: className,
-            });
-          })}
-        </div>
+    <div onMouseEnter={pause} onMouseLeave={resume}>
+      {props.slides?.length > 0 &&
+        props.slides.map((slide, index) => {
+          return (
+            <Slide
+              background={slide.path}
+              active={index === activeSlide}
+              key={index}
+            />
+          );
+        })}
+      <div className="rightArrow" onClick={nextSlide}>
+        <ArrowRightCircle style={{ fontSize: "28px" }} />
+      </div>
+      <div className="leftArrow" onClick={prevSlide}>
+        <ArrowLeftCircle style={{ fontSize: "28px" }} />
       </div>
     </div>
   );

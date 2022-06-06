@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import OtpInput from "react-otp-input";
+import routes from "../../Helper/routes";
 
 const Otp = (props) => {
   const [otp, setOtp] = useState("");
@@ -13,13 +14,16 @@ const Otp = (props) => {
   const handleChange = (otp) => setOtp(otp);
 
   const submitHandler = async () => {
-    try {
-      await props.verifyOtp({ otp: otp, mobileNo: mobileNo }).then((res) => {
-        console.log("res", res);
-      });
-    } finally {
-      // props.history.push(routes.home);
-    }
+    await props.verifyOtp({ otp: otp, mobileNo: mobileNo }).then((res) => {
+      if (res.data) {
+        props.history.push(routes.home);
+        window.location.reload();
+      }
+    });
+  };
+
+  const resendOtp = () => {
+    props.resendOtp({ mobileNo: mobileNo });
   };
 
   return (
@@ -63,6 +67,11 @@ const Otp = (props) => {
             onClick={submitHandler}
           >
             Continue
+          </div>
+          <div>
+            <small onClick={resendOtp} className="pointer">
+              Resend OTP
+            </small>
           </div>
         </div>
       </div>

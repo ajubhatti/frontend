@@ -5,7 +5,8 @@ export const auth = {
   forgotPass: { method: "post", url: "/auth/forgot-password" },
   resetPass: { method: "post", url: "/auth/reset-password" },
   verifyEmail: { method: "post", url: "/auth/verify-email" },
-  verifyPhone: {method: "post", url: "/auth/verify-phone-no"},
+  verifyPhone: { method: "post", url: "/auth/verify-phone-no" },
+  resendOtp: { method: "post", url: "/auth/resendOtp" },
   referer: { method: "post", url: "/auth/getByReferralCode" },
 };
 
@@ -23,4 +24,5 @@ export const extra = {
 export const profile = {
   adminBankList: { method: "get", url: "/bankAccount" },
   walletRequest: { method: "post", url: "/walletTransaction" },
+  walletTransaction: { method: "post", url: "/walletTransaction/getByUserId" },
 };
