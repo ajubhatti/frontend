@@ -122,7 +122,7 @@ const Wallet = (props) => {
           </div>
           <div className="mb-9">
             <div className="mb-3">
-              <h2 className="h5 mb-0">Your current plan</h2>
+              <h2 className="h5 mb-0">Your recent activity</h2>
             </div>
             <Table data={data} headerName={headerName} />
           </div>
