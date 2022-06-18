@@ -22,6 +22,12 @@ const ForgotForm = (props) => {
       try {
         await props.forgotPassword({ phoneNumber: phoneNumber }).then((res) => {
           toast.success(res.message);
+          props.history.push({
+            pathname: routes.reset,
+            state: {
+              mobileNo: phoneNumber,
+            },
+          });
         });
       } finally {
         setApiCall(false);
@@ -39,7 +45,7 @@ const ForgotForm = (props) => {
         <input
           type="tel"
           name="phoneNumber"
-          placeholder="123-45-678"
+          placeholder="12345678"
           pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
           required
           value={phoneNumber}

@@ -5,12 +5,12 @@ import Logo from "../../Assets/logo.jpg";
 import { getToken } from "../../Helper/LocalStorage";
 
 const Header = () => {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(true);
   const isUser = getToken();
 
   const Links = [
     { title: "Home", link: routes.home },
-    { title: "Service", link: routes.home },
+    { title: "Service", link: routes.service },
     { title: "Support", link: routes.support },
     { title: "About Us", link: routes.aboutUs },
     { title: "Contact US", link: routes.contactUs },
@@ -21,7 +21,7 @@ const Header = () => {
   return (
     <header className="u-header">
       <div className="u-header__section">
-        <div className="container">
+        <div>
           <nav className="navbar navbar-expand-md u-header__navbar u-header__navbar--no-space hs-menu-initialized hs-menu-horizontal">
             <Link
               to={routes.home}

@@ -71,3 +71,12 @@ export const getRefererUser = (data) => () =>
       })
       .catch((err) => reject(err));
   });
+
+export const stateListing = (data) => () =>
+  new Promise((resolve, reject) => {
+    fetchUrl(auth.state.method, auth.state.url, data, configData)
+      .then((res) => {
+        resolve(res);
+      })
+      .catch((err) => reject(err));
+  });

@@ -6,12 +6,12 @@ import * as moment from "moment";
 
 const headerName = [
   {
-    label: "Credit Account",
-    key: "creditAccount",
-    prop: "creditAccount",
-    title: "Credit Account",
+    label: "Date",
+    key: "created",
+    prop: "created",
+    title: "Date",
+    cell: (row) => moment(row.created_at).format("DD-MM-YYYY H:mm:ss"),
     isSortable: true,
-    isFilterable: true,
   },
   {
     label: "Type",
@@ -22,6 +22,13 @@ const headerName = [
     isFilterable: true,
   },
   {
+    label: "Reference No",
+    key: "slipNo",
+    prop: "slipNo",
+    title: "Reference No",
+    isSortable: true,
+  },
+  {
     label: "Amount",
     key: "requestAmount",
     prop: "requestAmount",
@@ -29,25 +36,18 @@ const headerName = [
     isSortable: true,
   },
   {
-    label: "Slip No",
-    key: "slipNo",
-    prop: "slipNo",
-    title: "Slip No",
+    label: "Remark",
+    key: "remark",
+    prop: "remark",
+    title: "Remark",
     isSortable: true,
+    isFilterable: true,
   },
   {
     label: "Status",
     key: "statusOfWalletRequest",
     prop: "statusOfWalletRequest",
     title: "Status",
-    isSortable: true,
-  },
-  {
-    label: "Date",
-    key: "created",
-    prop: "created",
-    title: "Date",
-    cell: (row) => moment(row.created_at).format("DD-MM-YYYY h:mm:ss a"),
     isSortable: true,
   },
 ];

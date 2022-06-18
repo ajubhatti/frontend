@@ -9,11 +9,12 @@ import ProfileContainer from "../Containers/Profile";
 import ProfileDashboardContainer from "../Containers/Profile/dashboard";
 import ProfileTransactionContainer from "../Containers/Profile/Transaction";
 import ChangePasswordContainer from "../Containers/Profile/ChangePassword";
-import ChangePinContainer from '../Containers/Profile/ChangePin'
+import ChangePinContainer from "../Containers/Profile/ChangePin";
 import RegisterContainer from "../Containers/Register";
 import ResetPasswordContainer from "../Containers/ResetPassword";
 import verifyEmailContainer from "../Containers/verifyEmail";
 import ReferContainer from "../Containers/Refer";
+import ServiceContainer from "../Containers/Service";
 import SupportContainer from "../Containers/Support";
 import WalletContainer from "../Containers/Wallet";
 import ContactContainer from "../Containers/ContactUs";
@@ -146,6 +147,12 @@ const Full = (props) => {
           path={routes.refer}
           name="refer"
           component={ReferContainer}
+        />
+        <Route
+          exact
+          path={routes.service}
+          name="service"
+          component={ServiceContainer}
         />
         <Route
           exact

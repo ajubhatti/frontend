@@ -133,45 +133,16 @@ const Refer = (props) => {
                 Copy or share your referral link with friends
               </small>
               <ul className="list-inline mt-3">
-                {shareInviteVia(code).map((platform, index) => {
-                  return (
-                    <li className="list-inline-item" key={index}>
-                      {platform}
-                    </li>
-                  );
-                })}
+                {shareInviteVia(window.location.origin).map(
+                  (platform, index) => {
+                    return (
+                      <li className="list-inline-item" key={index}>
+                        {platform}
+                      </li>
+                    );
+                  }
+                )}
               </ul>
-            </div>
-            <div className="col-md-6 col-lg-4">
-              <div className="bg-primary shadow-primary-lg rounded pt-4 pb-5 px-5">
-                <div className="d-flex align-items-center">
-                  <h4 className="h6 text-white mb-0">Referrals</h4>
-                </div>
-                <hr className="opacity-md mt-3 mb-4" />
-                <div className="py-2">
-                  <div className="row">
-                    <div className="col-6">
-                      <div className="mb-3">
-                        <span className="d-block text-white-70 font-size-1">
-                          Overall:
-                        </span>
-                        <span className="align-top text-white">$</span>
-                        <span className="text-white font-size-3 font-weight-medium text-lh-sm">
-                          1,350
-                        </span>
-                      </div>
-                      <span className="text-white-70 font-size-1">
-                        Monthly:
-                      </span>
-                      <span className="text-white font-weight-medium font-size-1">
-                        $425
-                      </span>
-                    </div>
-
-                    <div className="col-6 align-self-end"></div>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>

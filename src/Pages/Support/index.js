@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Nav, Tab } from "react-bootstrap";
 import knowledgebaseCommunityImg from "../../Assets/knowledgebase-community.svg";
 import Icon62 from "../../Assets/icon62.svg";
+import routes from "../../Helper/routes";
 
 const Support = (props) => {
   const [listingData, setListingData] = useState([]);
@@ -15,6 +16,10 @@ const Support = (props) => {
 
     getSupportListing();
   }, [props]);
+
+  const submitRedirect = () => {
+    props.history.push(routes.contactUs);
+  };
 
   return (
     <>
@@ -87,11 +92,16 @@ const Support = (props) => {
             <figure className="ie-height-72 w-100 max-width-10 mx-auto mb-6">
               <img src={Icon62} alt="" />
             </figure>
-            <div class="mb-5">
-              <h2 class="h3 font-weight-medium">Still no luck? We can help!</h2>
+            <div className="mb-5">
+              <h2 className="h3 font-weight-medium">
+                Still no luck? We can help!
+              </h2>
             </div>
-            <div class="mb-4">
-              <button className="btn btn-primary transition-3d-hover">
+            <div className="mb-4">
+              <button
+                className="btn btn-primary transition-3d-hover"
+                onClick={submitRedirect}
+              >
                 Submit a Request
               </button>
             </div>

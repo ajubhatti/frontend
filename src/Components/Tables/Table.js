@@ -17,7 +17,15 @@ const TableComponent = ({ data, headerName }) => {
       <DatatableWrapper
         body={data}
         headers={headerName}
-        initialSort={{ prop: "name", isAscending: true }}
+        // sortProps={{
+        //   initialState: {
+        //     order: "desc",
+        //     prop: "created_at",
+        //   },
+        //   sortValueObj: {
+        //     created_at: (date) => moment(date).format("DD-MM-YYYY h:mm:ss a"),
+        //   },
+        // }}
         paginationOptionsProps={{
           initialState: {
             rowsPerPage: 10,

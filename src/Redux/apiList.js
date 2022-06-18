@@ -8,10 +8,11 @@ export const auth = {
   verifyPhone: { method: "post", url: "/auth/verify-phone-no" },
   resendOtp: { method: "post", url: "/auth/resendOtp" },
   referer: { method: "post", url: "/auth/getByReferralCode" },
+  state: { method: "get", url: "/state" },
 };
 
 export const home = {
-  banner: { method: "get", url: "/banner" },
+  banner: { method: "get", url: "/myBanner" },
   ticker: { method: "get", url: "/ticker" },
 };
 
@@ -25,4 +26,8 @@ export const profile = {
   adminBankList: { method: "get", url: "/bankAccount" },
   walletRequest: { method: "post", url: "/walletTransaction" },
   walletTransaction: { method: "post", url: "/walletTransaction/getByUserId" },
+};
+
+export const service = {
+  service: { method: "get", url: "/service" },
 };

@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Form from "../../Components/Form";
 import routes from "../../Helper/routes";
 import { toast } from "react-toastify";
 
 const RegisterForm = (props) => {
+  const [stateData, setStateData] = useState([]);
   const [apiCall, setApiCall] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [refererName, setRefererName] = useState("");
@@ -12,10 +13,24 @@ const RegisterForm = (props) => {
   const [values, setValues] = useState({
     userName: "",
     phoneNumber: "",
+    state: stateData[0]?._id || "",
+    city: "",
+    pincode: "",
     email: "",
     password: "",
+    ConformPassword: "",
     referrelId: "",
   });
+
+  useEffect(() => {
+    const getStateListing = async () => {
+      await props.stateListing().then((res) => {
+        setStateData(res.data);
+      });
+    };
+
+    getStateListing();
+  }, [props]);
 
   const handlerChange = (event) => {
     const { name, value } = event.target;
@@ -46,13 +61,26 @@ const RegisterForm = (props) => {
     if (
       values.userName !== "" &&
       values.phoneNumber !== "" &&
+      values.city !== "" &&
+      values.pincode !== "" &&
       values.email !== "" &&
-      values.password !== ""
+      values.password !== "" &&
+      values.ConformPassword !== ""
     ) {
       if (checked) {
         setApiCall(true);
         try {
-          await props.register(values).then((res) => {
+          const payload = {
+            userName: values.userName,
+            phoneNumber: values.phoneNumber,
+            stateId: values.stateId,
+            city: values.city,
+            pincode: values.pincode,
+            email: values.email,
+            password: values.password,
+            referrelId: values.referrelId,
+          };
+          await props.register(payload).then((res) => {
             toast.success(res.message);
             props.history.push({
               pathname: routes.otp,
@@ -99,7 +127,7 @@ const RegisterForm = (props) => {
         <label className="form-label">Full Name</label>
         <input
           type="text"
-          placeholder="Jhone Doe"
+          placeholder="Mukul Joshi"
           required
           name="userName"
           value={values.userName}
@@ -118,7 +146,7 @@ const RegisterForm = (props) => {
         <input
           type="tel"
           name="phoneNumber"
-          placeholder="123-45-678"
+          placeholder="12345678"
           pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
           required
           value={values.phoneNumber}
@@ -130,6 +158,58 @@ const RegisterForm = (props) => {
         />
         {submitted && !values.phoneNumber && (
           <div className="invalid-feedback">Phone Number is required</div>
+        )}
+      </div>
+      <div className="form-group">
+        <label className="form-label">State</label>
+        <select
+          value={values.state}
+          name="state"
+          onChange={handlerChange}
+          className="form-control"
+        >
+          {stateData.length > 0 &&
+            stateData.map((state, index) => {
+              return (
+                <option value={state._id} key={index}>
+                  {state.stateName}
+                </option>
+              );
+            })}
+        </select>
+      </div>
+      <div className="form-group">
+        <label className="form-label">City</label>
+        <input
+          type="text"
+          placeholder="surat"
+          required
+          name="city"
+          value={values.city}
+          onChange={handlerChange}
+          className={
+            "form-control" + (submitted && !values.city ? " is-invalid" : "")
+          }
+        />
+        {submitted && !values.city && (
+          <div className="invalid-feedback">City is required</div>
+        )}
+      </div>
+      <div className="form-group">
+        <label className="form-label">Pin Code</label>
+        <input
+          type="number"
+          placeholder="394212"
+          required
+          name="pincode"
+          value={values.pincode}
+          onChange={handlerChange}
+          className={
+            "form-control" + (submitted && !values.pincode ? " is-invalid" : "")
+          }
+        />
+        {submitted && !values.pincode && (
+          <div className="invalid-feedback">Pin Code is required</div>
         )}
       </div>
       <div className="form-group">
@@ -153,7 +233,7 @@ const RegisterForm = (props) => {
         <label className="form-label">Password</label>
         <input
           type="password"
-          placeholder="Password"
+          placeholder="password"
           required
           name="password"
           value={values.password}
@@ -165,6 +245,26 @@ const RegisterForm = (props) => {
         />
         {submitted && !values.password && (
           <div className="invalid-feedback">Password is required</div>
+        )}
+      </div>
+      <div className="form-group">
+        <label className="form-label">Conform Password</label>
+        <input
+          type="password"
+          placeholder="conform password"
+          required
+          name="ConformPassword"
+          value={values.ConformPassword}
+          onChange={handlerChange}
+          className={
+            "form-control" +
+            (submitted && values.password != values.ConformPassword
+              ? " is-invalid"
+              : "")
+          }
+        />
+        {submitted && values.password != values.ConformPassword && (
+          <div className="invalid-feedback">Password is invalid</div>
         )}
       </div>
 
