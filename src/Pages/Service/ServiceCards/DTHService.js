@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Form from "../../../Components/Form";
 import { DTHOperator } from "../Operators/DTHOperator";
 
@@ -11,6 +11,10 @@ const DTHService = (props) => {
     tel: "",
     amount: "",
   });
+
+  useEffect(() => {
+    fetchPlan();
+  }, []);
 
   const handlerChange = (event) => {
     const { name, value } = event.target;
@@ -40,7 +44,7 @@ const DTHService = (props) => {
   const fetchPlan = async (value) => {
     // https://www.mplan.in/api/plans.php?apikey=[yourapikey]&offer=roffer&tel=[mobile]&operator=[operator](BSNL,Idea,given below)
     let url = `https://www.mplan.in/api/dthplans.php?apikey=ff7c4e87910a29fc6fa601dd4a8469b6&operator=${value}`;
-    let url2 = `www.mplan.in/api/plans.php?apikey=ff7c4e87910a29fc6fa601dd4a8469b6&offer=roffer&tel=9033501636&operator=Jio`;
+    let url2 = `https://www.mplan.in/api/plans.php?apikey=ff7c4e87910a29fc6fa601dd4a8469b6&offer=roffer&tel=9033501636&operator=Jio`;
 
     console.log({ url2 });
 
