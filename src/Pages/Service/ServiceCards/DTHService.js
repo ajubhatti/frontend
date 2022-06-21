@@ -46,7 +46,7 @@ const DTHService = (props) => {
     let url = `https://www.mplan.in/api/dthplans.php?apikey=ff7c4e87910a29fc6fa601dd4a8469b6&operator=${value}`;
     let url2 = `https://www.mplan.in/api/plans.php?apikey=ff7c4e87910a29fc6fa601dd4a8469b6&offer=roffer&tel=9033501636&operator=Jio`;
 
-    console.log({ url2 });
+    console.log("check data url---", { url2 });
 
     axios
       .get(url2)
