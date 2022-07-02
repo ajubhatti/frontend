@@ -50,7 +50,7 @@ const LoginForm = (props) => {
         <input
           type="tel"
           name="mobileNo"
-          placeholder="123-45-678"
+          placeholder="XXXXXXXXXX"
           pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
           required
           value={values.mobileNo}
@@ -97,6 +97,7 @@ const LoginForm = (props) => {
         <div className="col-6">
           <span className="small text-muted">Don't have an account?</span>
           <Link to={routes.register} className="small">
+            {" "}
             Signup
           </Link>
         </div>
