@@ -13,7 +13,6 @@ import InsuranceService from "./ServiceCards/InsuranceService";
 import LandlineService from "./ServiceCards/LandlineService";
 import LoneService from "./ServiceCards/LoneService";
 import WaterService from "./ServiceCards/WaterService";
-import axios from "axios";
 
 const Service = (props) => {
   const [listingData, setListingData] = useState([]);
@@ -26,26 +25,7 @@ const Service = (props) => {
     };
 
     getServiceListing();
-    fetchPlan();
   }, [props]);
-
-  const fetchPlan = async (value) => {
-    // https://www.mplan.in/api/plans.php?apikey=[yourapikey]&offer=roffer&tel=[mobile]&operator=[operator](BSNL,Idea,given below)
-    let url = `https://www.mplan.in/api/dthplans.php?apikey=ff7c4e87910a29fc6fa601dd4a8469b6&operator=${value}`;
-    let url2 = `https://cors-anywhere.herokuapp.com/https://www.mplan.in/api/plans.php?apikey=ff7c4e87910a29fc6fa601dd4a8469b6&offer=roffer&tel=9033501636&operator=Jio`;
-
-    console.log("check data url---", { url2 });
-
-    axios
-      .get(url2)
-      .then(function (response) {
-        console.log(response);
-      })
-      .catch(function (error) {
-        console.log(error);
-      })
-      .then(function () {});
-  };
 
   const data = [
     {
