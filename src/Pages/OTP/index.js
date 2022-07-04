@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import OtpInput from "react-otp-input";
+// import OtpInput from "react-otp-input";
 import routes from "../../Helper/routes";
 
 const Otp = (props) => {
@@ -35,7 +35,7 @@ const Otp = (props) => {
             Enter the verification code we just send you on your phone number.
           </p>
           <div className="d-flex justify-content-center mb-5">
-            <OtpInput
+            {/* <OtpInput
               value={otp}
               onChange={handleChange}
               numInputs={6}
@@ -60,7 +60,7 @@ const Otp = (props) => {
               focusStyle={{
                 borderBottom: "2px solid #3451FF",
               }}
-            />
+            /> */}
           </div>
           <div
             className="btn btn-primary btn-pill transition-3d-hover px-5"

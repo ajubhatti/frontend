@@ -3,7 +3,7 @@ import Form from "../../Components/Form";
 import routes from "../../Helper/routes";
 import { getQueryData } from "../../Helper";
 import { toast } from "react-toastify";
-import OtpInput from "react-otp-input";
+// import OtpInput from "react-otp-input";
 
 const ResetForm = (props) => {
   const [apiCall, setApiCall] = useState(false);
@@ -70,7 +70,7 @@ const ResetForm = (props) => {
       <div className="form-group">
         <label className="form-label">Password</label>
         <div className="d-flex justify-content-center mb-5">
-          <OtpInput
+          {/* <OtpInput
             value={values.otp}
             onChange={otpHandler}
             numInputs={6}
@@ -94,7 +94,7 @@ const ResetForm = (props) => {
             focusStyle={{
               borderBottom: "2px solid #3451FF",
             }}
-          />
+          /> */}
           {submitted && !values.otp && (
             <div className="invalid-feedback">OTP is required</div>
           )}
